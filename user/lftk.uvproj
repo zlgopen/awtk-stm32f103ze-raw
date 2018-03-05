@@ -794,6 +794,21 @@
               <FileType>1</FileType>
               <FilePath>..\lftk\src\platforms\stm32f103ze_raw.c</FilePath>
             </File>
+            <File>
+              <FileName>events.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\events.c</FilePath>
+            </File>
+            <File>
+              <FileName>lftk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\lftk.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\timer.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
