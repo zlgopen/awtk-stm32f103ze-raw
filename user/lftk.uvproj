@@ -125,7 +125,7 @@
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
           <Simulator>
-            <UseSimulator>1</UseSimulator>
+            <UseSimulator>0</UseSimulator>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -137,7 +137,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
-            <UseTarget>0</UseTarget>
+            <UseTarget>1</UseTarget>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -168,9 +168,9 @@
         </DebugOption>
         <Utilities>
           <Flash1>
-            <UseTargetDll>1</UseTargetDll>
-            <UseExternalTool>0</UseExternalTool>
-            <RunIndependent>0</RunIndependent>
+            <UseTargetDll>0</UseTargetDll>
+            <UseExternalTool>1</UseExternalTool>
+            <RunIndependent>1</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
             <DriverSelection>4099</DriverSelection>
@@ -785,11 +785,6 @@
               <FilePath>..\lftk\demos\demo1_app.c</FilePath>
             </File>
             <File>
-              <FileName>demo1_main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\lftk\demos\demo1_main.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f103ze_raw.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\lftk\src\platforms\stm32f103ze_raw.c</FilePath>
@@ -808,6 +803,21 @@
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\lftk\src\base\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>demo_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\demos\demo_main.c</FilePath>
+            </File>
+            <File>
+              <FileName>resource_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\resource_manager.c</FilePath>
+            </File>
+            <File>
+              <FileName>layout.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\layout.c</FilePath>
             </File>
           </Files>
         </Group>
