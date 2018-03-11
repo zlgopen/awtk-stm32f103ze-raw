@@ -373,7 +373,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--gnu</MiscControls>
-              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG,WITH_STM32F103ZE_RAW</Define>
+              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG,WITH_STM32F103ZE_RAW,FAST_MODE</Define>
               <Undefine></Undefine>
               <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\红外遥控;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\sd_card;..\app\Tetris;..\app\snake;..\app\RTC_J;..\app\touch;..\lftk\src</IncludePath>
             </VariousControls>
