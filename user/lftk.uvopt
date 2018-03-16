@@ -155,18 +155,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>91</LineNumber>
+          <LineNumber>58</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134255220</Address>
+          <Address>134259012</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\lftk\src\main_loop\main_loop_stm32_raw.c</Filename>
+          <Filename>..\lftk\src\base\event_queue.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\lftk_demo1\../lftk/src/main_loop/main_loop_stm32_raw.c\91</Expression>
+          <Expression>\\lftk_demo1\../lftk/src/base/event_queue.c\58</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>43</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134258952</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\lftk\src\base\event_queue.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\lftk_demo1\../lftk/src/base/event_queue.c\43</Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>
@@ -524,7 +540,7 @@
 
   <Group>
     <GroupName>app</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1157,6 +1173,18 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\lftk\src\base\layout.c</PathWithFileName>
       <FilenameWithoutPath>layout.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>76</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\lftk\src\base\event_queue.c</PathWithFileName>
+      <FilenameWithoutPath>event_queue.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

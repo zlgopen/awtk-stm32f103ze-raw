@@ -819,6 +819,11 @@
               <FileType>1</FileType>
               <FilePath>..\lftk\src\base\layout.c</FilePath>
             </File>
+            <File>
+              <FileName>event_queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\event_queue.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
