@@ -755,11 +755,6 @@
               <FilePath>..\lftk\src\font\font_bitmap.c</FilePath>
             </File>
             <File>
-              <FileName>image_loader_bitmap.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\lftk\src\image_loader\image_loader_bitmap.c</FilePath>
-            </File>
-            <File>
               <FileName>lcd_stm32_raw.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\lftk\src\lcd\lcd_stm32_raw.c</FilePath>
@@ -795,11 +790,6 @@
               <FilePath>..\lftk\src\base\events.c</FilePath>
             </File>
             <File>
-              <FileName>lftk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\lftk.c</FilePath>
-            </File>
-            <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\lftk\src\base\timer.c</FilePath>
@@ -823,6 +813,11 @@
               <FileName>event_queue.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\lftk\src\base\event_queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>lftk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\lftk.c</FilePath>
             </File>
           </Files>
         </Group>
