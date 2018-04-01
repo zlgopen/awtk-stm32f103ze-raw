@@ -34,7 +34,6 @@ void RTC_IRQHandler()
 //返回值0：初始化正常，1：不正常
 u8 rtc_init()
 {
-	u8 temp=0;
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_BKP|RCC_APB1Periph_PWR,ENABLE);//打开后备备份区域时钟和电源时钟
 	PWR_BackupAccessCmd(ENABLE); //使能RTC和后备区域寄存器访问
 	if(BKP_ReadBackupRegister(BKP_DR1)!=0x5050) //读取后备寄存器中BKP_DR1中的值，如果不是0x5050第一次初始化配置
