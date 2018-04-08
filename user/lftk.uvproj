@@ -819,6 +819,11 @@
               <FileType>1</FileType>
               <FilePath>..\lftk\src\lftk.c</FilePath>
             </File>
+            <File>
+              <FileName>slider.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\slider.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
