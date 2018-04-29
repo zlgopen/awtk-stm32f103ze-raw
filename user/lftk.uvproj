@@ -815,14 +815,44 @@
               <FilePath>..\lftk\src\base\event_queue.c</FilePath>
             </File>
             <File>
-              <FileName>lftk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\lftk\src\lftk.c</FilePath>
-            </File>
-            <File>
               <FileName>slider.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\lftk\src\base\slider.c</FilePath>
+            </File>
+            <File>
+              <FileName>window_animator.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\window_animator.c</FilePath>
+            </File>
+            <File>
+              <FileName>window_animator_null.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\animator\window_animator_null.c</FilePath>
+            </File>
+            <File>
+              <FileName>idle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\idle.c</FilePath>
+            </File>
+            <File>
+              <FileName>time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\time.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\system_info.c</FilePath>
+            </File>
+            <File>
+              <FileName>image_loader.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\base\image_loader.c</FilePath>
+            </File>
+            <File>
+              <FileName>tk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\lftk\src\tk.c</FilePath>
             </File>
           </Files>
         </Group>
