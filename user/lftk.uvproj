@@ -854,6 +854,16 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\tk.c</FilePath>
             </File>
+            <File>
+              <FileName>locale.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\locale.c</FilePath>
+            </File>
+            <File>
+              <FileName>str.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\str.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
