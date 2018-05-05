@@ -3515,7 +3515,7 @@
       <Size>100</Size>
       <ActiveTab>7</ActiveTab>
       <Doc>
-        <Name>..\lftk\src\lcd/lcd_reg.inc</Name>
+        <Name>..\awtk\src\lcd/lcd_reg.inc</Name>
         <ColumnNumber>5</ColumnNumber>
         <TopLine>130</TopLine>
         <CurrentLine>157</CurrentLine>
@@ -3524,7 +3524,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\demos\demo1_app.c</Name>
+        <Name>..\awtk\demos\demo1_app.c</Name>
         <ColumnNumber>33</ColumnNumber>
         <TopLine>84</TopLine>
         <CurrentLine>101</CurrentLine>
@@ -3542,7 +3542,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\base\widget.c</Name>
+        <Name>..\awtk\src\base\widget.c</Name>
         <ColumnNumber>0</ColumnNumber>
         <TopLine>492</TopLine>
         <CurrentLine>521</CurrentLine>
@@ -3551,7 +3551,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\base\canvas.c</Name>
+        <Name>..\awtk\src\base\canvas.c</Name>
         <ColumnNumber>0</ColumnNumber>
         <TopLine>654</TopLine>
         <CurrentLine>676</CurrentLine>
@@ -3560,7 +3560,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\base\wstr.c</Name>
+        <Name>..\awtk\src\base\wstr.c</Name>
         <ColumnNumber>41</ColumnNumber>
         <TopLine>136</TopLine>
         <CurrentLine>155</CurrentLine>
@@ -3569,7 +3569,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\base/wstr.h</Name>
+        <Name>..\awtk\src\base/wstr.h</Name>
         <ColumnNumber>20</ColumnNumber>
         <TopLine>19</TopLine>
         <CurrentLine>48</CurrentLine>
@@ -3578,7 +3578,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\base\lcd.c</Name>
+        <Name>..\awtk\src\base\lcd.c</Name>
         <ColumnNumber>7</ColumnNumber>
         <TopLine>136</TopLine>
         <CurrentLine>155</CurrentLine>
@@ -3587,7 +3587,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\tk.c</Name>
+        <Name>..\awtk\src\tk.c</Name>
         <ColumnNumber>3</ColumnNumber>
         <TopLine>1</TopLine>
         <CurrentLine>15</CurrentLine>
@@ -3596,7 +3596,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\lcd/rgb565.h</Name>
+        <Name>..\awtk\src\lcd/rgb565.h</Name>
         <ColumnNumber>31</ColumnNumber>
         <TopLine>17</TopLine>
         <CurrentLine>38</CurrentLine>
@@ -3605,7 +3605,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\base/system_info.h</Name>
+        <Name>..\awtk\src\base/system_info.h</Name>
         <ColumnNumber>0</ColumnNumber>
         <TopLine>1</TopLine>
         <CurrentLine>26</CurrentLine>
@@ -3614,7 +3614,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\src\base\font_manager.c</Name>
+        <Name>..\awtk\src\base\font_manager.c</Name>
         <ColumnNumber>0</ColumnNumber>
         <TopLine>31</TopLine>
         <CurrentLine>53</CurrentLine>
@@ -3623,7 +3623,7 @@
         <PaneID>0</PaneID>
       </Doc>
       <Doc>
-        <Name>..\lftk\demos\resource.c</Name>
+        <Name>..\awtk\demos\resource.c</Name>
         <ColumnNumber>33</ColumnNumber>
         <TopLine>43</TopLine>
         <CurrentLine>64</CurrentLine>

@@ -47,7 +47,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>..\obj\</OutputDirectory>
-          <OutputName>lftk_demo1</OutputName>
+          <OutputName>awtk_demo1</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -375,7 +375,7 @@
               <MiscControls>--gnu</MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG,WITH_STM32F103ZE_RAW,FAST_MODE,WITH_BITMAP_FONT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\红外遥控;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\sd_card;..\app\Tetris;..\app\snake;..\app\RTC_J;..\app\touch;..\lftk\src</IncludePath>
+              <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\红外遥控;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\sd_card;..\app\Tetris;..\app\snake;..\app\RTC_J;..\app\touch;..\awtk\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -602,257 +602,257 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>lftk</GroupName>
+          <GroupName>awtk</GroupName>
           <Files>
             <File>
               <FileName>array.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\array.c</FilePath>
+              <FilePath>..\awtk\src\base\array.c</FilePath>
             </File>
             <File>
               <FileName>bitmap.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\bitmap.c</FilePath>
+              <FilePath>..\awtk\src\base\bitmap.c</FilePath>
             </File>
             <File>
               <FileName>buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\buffer.c</FilePath>
+              <FilePath>..\awtk\src\base\buffer.c</FilePath>
             </File>
             <File>
               <FileName>button.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\button.c</FilePath>
+              <FilePath>..\awtk\src\base\button.c</FilePath>
             </File>
             <File>
               <FileName>canvas.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\canvas.c</FilePath>
+              <FilePath>..\awtk\src\base\canvas.c</FilePath>
             </File>
             <File>
               <FileName>check_button.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\check_button.c</FilePath>
+              <FilePath>..\awtk\src\base\check_button.c</FilePath>
             </File>
             <File>
               <FileName>color.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\color.c</FilePath>
+              <FilePath>..\awtk\src\base\color.c</FilePath>
             </File>
             <File>
               <FileName>dialog.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\dialog.c</FilePath>
+              <FilePath>..\awtk\src\base\dialog.c</FilePath>
             </File>
             <File>
               <FileName>emitter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\emitter.c</FilePath>
+              <FilePath>..\awtk\src\base\emitter.c</FilePath>
             </File>
             <File>
               <FileName>enums.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\enums.c</FilePath>
+              <FilePath>..\awtk\src\base\enums.c</FilePath>
             </File>
             <File>
               <FileName>font.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\font.c</FilePath>
+              <FilePath>..\awtk\src\base\font.c</FilePath>
             </File>
             <File>
               <FileName>font_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\font_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\font_manager.c</FilePath>
             </File>
             <File>
               <FileName>group_box.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\group_box.c</FilePath>
+              <FilePath>..\awtk\src\base\group_box.c</FilePath>
             </File>
             <File>
               <FileName>image.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\image.c</FilePath>
+              <FilePath>..\awtk\src\base\image.c</FilePath>
             </File>
             <File>
               <FileName>image_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\image_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\image_manager.c</FilePath>
             </File>
             <File>
               <FileName>label.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\label.c</FilePath>
+              <FilePath>..\awtk\src\base\label.c</FilePath>
             </File>
             <File>
               <FileName>lcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\lcd.c</FilePath>
+              <FilePath>..\awtk\src\base\lcd.c</FilePath>
             </File>
             <File>
               <FileName>main_loop.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\main_loop.c</FilePath>
+              <FilePath>..\awtk\src\base\main_loop.c</FilePath>
             </File>
             <File>
               <FileName>mem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\mem.c</FilePath>
+              <FilePath>..\awtk\src\base\mem.c</FilePath>
             </File>
             <File>
               <FileName>progress_bar.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\progress_bar.c</FilePath>
+              <FilePath>..\awtk\src\base\progress_bar.c</FilePath>
             </File>
             <File>
               <FileName>rect.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\rect.c</FilePath>
+              <FilePath>..\awtk\src\base\rect.c</FilePath>
             </File>
             <File>
               <FileName>theme.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\theme.c</FilePath>
+              <FilePath>..\awtk\src\base\theme.c</FilePath>
             </File>
             <File>
               <FileName>utf8.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\utf8.c</FilePath>
+              <FilePath>..\awtk\src\base\utf8.c</FilePath>
             </File>
             <File>
               <FileName>value.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\value.c</FilePath>
+              <FilePath>..\awtk\src\base\value.c</FilePath>
             </File>
             <File>
               <FileName>widget.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\widget.c</FilePath>
+              <FilePath>..\awtk\src\base\widget.c</FilePath>
             </File>
             <File>
               <FileName>widget_vtable.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\widget_vtable.c</FilePath>
+              <FilePath>..\awtk\src\base\widget_vtable.c</FilePath>
             </File>
             <File>
               <FileName>window.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\window.c</FilePath>
+              <FilePath>..\awtk\src\base\window.c</FilePath>
             </File>
             <File>
               <FileName>window_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\window_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\window_manager.c</FilePath>
             </File>
             <File>
               <FileName>wstr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\wstr.c</FilePath>
+              <FilePath>..\awtk\src\base\wstr.c</FilePath>
             </File>
             <File>
               <FileName>font_bitmap.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\font\font_bitmap.c</FilePath>
+              <FilePath>..\awtk\src\font\font_bitmap.c</FilePath>
             </File>
             <File>
               <FileName>lcd_stm32_raw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\lcd\lcd_stm32_raw.c</FilePath>
+              <FilePath>..\awtk\src\lcd\lcd_stm32_raw.c</FilePath>
             </File>
             <File>
               <FileName>main_loop_stm32_raw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\main_loop\main_loop_stm32_raw.c</FilePath>
+              <FilePath>..\awtk\src\main_loop\main_loop_stm32_raw.c</FilePath>
             </File>
             <File>
               <FileName>utils.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\utils.c</FilePath>
+              <FilePath>..\awtk\src\base\utils.c</FilePath>
             </File>
             <File>
               <FileName>resource.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\demos\resource.c</FilePath>
+              <FilePath>..\awtk\demos\resource.c</FilePath>
             </File>
             <File>
               <FileName>demo1_app.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\demos\demo1_app.c</FilePath>
+              <FilePath>..\awtk\demos\demo1_app.c</FilePath>
             </File>
             <File>
               <FileName>stm32f103ze_raw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\platforms\stm32f103ze_raw.c</FilePath>
+              <FilePath>..\awtk\src\platforms\stm32f103ze_raw.c</FilePath>
             </File>
             <File>
               <FileName>events.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\events.c</FilePath>
+              <FilePath>..\awtk\src\base\events.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\timer.c</FilePath>
+              <FilePath>..\awtk\src\base\timer.c</FilePath>
             </File>
             <File>
               <FileName>demo_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\demos\demo_main.c</FilePath>
+              <FilePath>..\awtk\demos\demo_main.c</FilePath>
             </File>
             <File>
               <FileName>resource_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\resource_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\resource_manager.c</FilePath>
             </File>
             <File>
               <FileName>layout.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\layout.c</FilePath>
+              <FilePath>..\awtk\src\base\layout.c</FilePath>
             </File>
             <File>
               <FileName>event_queue.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\event_queue.c</FilePath>
+              <FilePath>..\awtk\src\base\event_queue.c</FilePath>
             </File>
             <File>
               <FileName>slider.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\slider.c</FilePath>
+              <FilePath>..\awtk\src\base\slider.c</FilePath>
             </File>
             <File>
               <FileName>window_animator.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\window_animator.c</FilePath>
+              <FilePath>..\awtk\src\base\window_animator.c</FilePath>
             </File>
             <File>
               <FileName>window_animator_null.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\animator\window_animator_null.c</FilePath>
+              <FilePath>..\awtk\src\animator\window_animator_null.c</FilePath>
             </File>
             <File>
               <FileName>idle.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\idle.c</FilePath>
+              <FilePath>..\awtk\src\base\idle.c</FilePath>
             </File>
             <File>
               <FileName>time.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\time.c</FilePath>
+              <FilePath>..\awtk\src\base\time.c</FilePath>
             </File>
             <File>
               <FileName>system_info.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\system_info.c</FilePath>
+              <FilePath>..\awtk\src\base\system_info.c</FilePath>
             </File>
             <File>
               <FileName>image_loader.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\base\image_loader.c</FilePath>
+              <FilePath>..\awtk\src\base\image_loader.c</FilePath>
             </File>
             <File>
               <FileName>tk.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\lftk\src\tk.c</FilePath>
+              <FilePath>..\awtk\src\tk.c</FilePath>
             </File>
           </Files>
         </Group>
