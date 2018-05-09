@@ -373,9 +373,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--gnu</MiscControls>
-              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG,WITH_STM32F103ZE_RAW,FAST_MODE,WITH_BITMAP_FONT</Define>
+              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG, FAST_MODE,WITH_BITMAP_FONT,USE_GUI_MAIN</Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\红外遥控;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\sd_card;..\app\Tetris;..\app\snake;..\app\RTC_J;..\app\touch;..\awtk\src</IncludePath>
+              <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\SysTick;..\app\RTC_J;..\app\touch;..\awtk\src</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -428,6 +428,11 @@
               <FileName>system_stm32f10x.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\system_stm32f10x.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -755,16 +760,6 @@
               <FilePath>..\awtk\src\font\font_bitmap.c</FilePath>
             </File>
             <File>
-              <FileName>lcd_stm32_raw.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\lcd\lcd_stm32_raw.c</FilePath>
-            </File>
-            <File>
-              <FileName>main_loop_stm32_raw.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\main_loop\main_loop_stm32_raw.c</FilePath>
-            </File>
-            <File>
               <FileName>utils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\utils.c</FilePath>
@@ -778,11 +773,6 @@
               <FileName>demo1_app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\demos\demo1_app.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f103ze_raw.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\platforms\stm32f103ze_raw.c</FilePath>
             </File>
             <File>
               <FileName>events.c</FileName>
@@ -863,6 +853,21 @@
               <FileName>str.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\str.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>awtk-port</GroupName>
+          <Files>
+            <File>
+              <FileName>lcd_stm32_raw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk-port\lcd_stm32_raw.c</FilePath>
+            </File>
+            <File>
+              <FileName>main_loop_stm32_raw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk-port\main_loop_stm32_raw.c</FilePath>
             </File>
           </Files>
         </Group>
