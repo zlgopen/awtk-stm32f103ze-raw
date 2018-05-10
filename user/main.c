@@ -2,7 +2,6 @@
 #include "delay.h"
 #include "flash.h"
 #include "gui.h"
-#include "lcd_driver.h"
 #include "led.h"
 #include "rtc.h"
 #include "stdlib.h"
@@ -10,8 +9,9 @@
 #include "tim.h"
 #include "touch.h"
 #include "usart.h"
+#include "lcd_driver.h"
 
-extern int gui_app_start(void* params);
+extern int gui_app_start(void);
 
 int main()
 {	
@@ -27,5 +27,5 @@ int main()
   TIM3_Init(50, 7199);
   rtc_init();
 
-	return gui_app_start((void*)0);
+	return gui_app_start();
 }

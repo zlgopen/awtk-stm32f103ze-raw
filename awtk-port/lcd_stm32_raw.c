@@ -1,7 +1,7 @@
 /**
  * File:   lcd_stm32_raw.c
  * Author: Li XianJing <xianjimli@hotmail.com>
- * Brief:  stm32_raw implemented lcd interface/
+ * Brief:  stm32_raw implemented lcd interface
  *
  * Copyright (c) 2018 - 2018  Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *

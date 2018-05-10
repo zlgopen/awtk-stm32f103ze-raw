@@ -1,9 +1,9 @@
 /**
- * file:   main_loop_raw.c
+ * file:   main_loop_stm32_raw.c
  * author: li xianjing <xianjimli@hotmail.com>
- * brief:  raw implemented main_loop interface
+ * brief:  main loop for stm32
  *
- * copyright (c) 2018 - 2018  li xianjing <xianjimli@hotmail.com>
+ * copyright (c) 2018 - 2018 Guangzhou ZHIYUAN Electronics Co.,Ltd. 
  *
  * this program is distributed in the hope that it will be useful,
  * but without any warranty; without even the implied warranty of
@@ -36,16 +36,12 @@
 #include "base/timer.h"
 #include "lcd/lcd_reg.h"
 #include "base/main_loop.h"
+#include "base/platform.h"
 #include "base/event_queue.h"
 #include "base/font_manager.h"
 #include "base/window_manager.h"
 
 static void dispatch_touch_events(bool_t pressed, xy_t x, xy_t y);
-
-uint32_t get_time_ms() {
-  /*TODO*/
-	return 0; 
-}
 
 uint8_t platform_scan_key() {
   return keyscan(0);
@@ -53,10 +49,6 @@ uint8_t platform_scan_key() {
 
 static lcd_t* platform_create_lcd(wh_t w, wh_t h) {
   return lcd_reg_create(w, h);
-}
-
-static void platform_delay_ms(uint16_t ms) {
-  delay_ms(ms);
 }
 
 void TIM3_IRQHandler(void) {

@@ -869,6 +869,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk-port\main_loop_stm32_raw.c</FilePath>
             </File>
+            <File>
+              <FileName>platform.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk-port\platform.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
