@@ -41,10 +41,11 @@
 #include "base/font_manager.h"
 #include "base/window_manager.h"
 
-static void dispatch_touch_events(bool_t pressed, xy_t x, xy_t y);
+static ret_t post_touch_events(main_loop_t* l, bool_t pressed, xy_t x, xy_t y);
 
-uint8_t platform_scan_key() {
-  return keyscan(0);
+ret_t platform_disaptch_input(main_loop_t* l) {
+  
+	return RET_OK;
 }
 
 static lcd_t* platform_create_lcd(wh_t w, wh_t h) {
@@ -56,9 +57,9 @@ void TIM3_IRQHandler(void) {
     TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 
     if (TOUCH_Scan() == 0) {
-      dispatch_touch_events(TRUE, TouchData.lcdx, TouchData.lcdy);
+      post_touch_events(main_loop(), TRUE, TouchData.lcdx, TouchData.lcdy);
     } else {
-      dispatch_touch_events(FALSE, TouchData.lcdx, TouchData.lcdy);
+      post_touch_events(main_loop(), FALSE, TouchData.lcdx, TouchData.lcdy);
     }
   }
 }

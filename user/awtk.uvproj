@@ -765,16 +765,6 @@
               <FilePath>..\awtk\src\base\utils.c</FilePath>
             </File>
             <File>
-              <FileName>resource.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\demos\resource.c</FilePath>
-            </File>
-            <File>
-              <FileName>demo1_app.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\demos\demo1_app.c</FilePath>
-            </File>
-            <File>
               <FileName>events.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\events.c</FilePath>
@@ -783,11 +773,6 @@
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>demo_main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\demos\demo_main.c</FilePath>
             </File>
             <File>
               <FileName>resource_manager.c</FileName>
@@ -873,6 +858,26 @@
               <FileName>platform.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk-port\platform.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>awtk-demo</GroupName>
+          <Files>
+            <File>
+              <FileName>demo_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\demos\demo_main.c</FilePath>
+            </File>
+            <File>
+              <FileName>demo1_app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\demos\demo1_app.c</FilePath>
+            </File>
+            <File>
+              <FileName>resource-mini.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\demos\resource-mini.c</FilePath>
             </File>
           </Files>
         </Group>
