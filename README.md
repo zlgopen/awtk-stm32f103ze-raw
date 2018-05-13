@@ -16,3 +16,6 @@ git clone https://github.com/xianjimli/awtk.git
 
 2. 用keil打开user/awtk.uvproj
 
+## 已知问题
+
+由于目前没有实现获取当前时间的(毫秒)函数，所以不支持定时器。

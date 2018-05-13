@@ -3,7 +3,7 @@
  * author: li xianjing <xianjimli@hotmail.com>
  * brief:  platform dependent function of stm32
  *
- * copyright (c) 2018 - 2018 Guangzhou ZHIYUAN Electronics Co.,Ltd. 
+ * copyright (c) 2018 - 2018 Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *
  * this program is distributed in the hope that it will be useful,
  * but without any warranty; without even the implied warranty of
@@ -26,19 +26,16 @@
 uint32_t get_time_ms() {
   uint32_t cnt = 0;
   /*TODO*/
-  return cnt; 
+  return cnt;
 }
 
-void sleep_ms(uint32_t ms) {
-  delay_ms(ms);
-}
+void sleep_ms(uint32_t ms) { delay_ms(ms); }
 
 static uint32_t s_heam_mem[2048];
 
 ret_t platform_prepare(void) {
   timer_init(get_time_ms);
   mem_init(s_heam_mem, sizeof(s_heam_mem));
-  
+
   return RET_OK;
 }
-
