@@ -24,9 +24,7 @@
 #include "base/timer.h"
 
 uint32_t get_time_ms() {
-  uint32_t cnt = 0;
-  /*TODO*/
-  return cnt;
+  return RTC_GetCounter();
 }
 
 void sleep_ms(uint32_t ms) { delay_ms(ms); }
