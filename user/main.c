@@ -11,7 +11,7 @@
 #include "usart.h"
 #include "lcd_driver.h"
 
-extern int gui_app_start(void);
+extern int gui_app_start(int lcd_w, int lcd_h);
 
 int main()
 {	
@@ -27,5 +27,5 @@ int main()
   TIM3_Init(50, 7199);
   rtc_init();
 
-	return gui_app_start();
+	return gui_app_start(320, 480);
 }
