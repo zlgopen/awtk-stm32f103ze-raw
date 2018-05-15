@@ -802,7 +802,7 @@
             <File>
               <FileName>window_animator_null.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\awtk\src\animator\window_animator_null.c</FilePath>
+              <FilePath>..\awtk\src\window_animators\window_animator_null.c</FilePath>
             </File>
             <File>
               <FileName>idle.c</FileName>
