@@ -839,6 +839,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\str.c</FilePath>
             </File>
+            <File>
+              <FileName>main_loop_simple.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\main_loop\main_loop_simple.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

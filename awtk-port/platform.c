@@ -1,9 +1,9 @@
 /**
- * file:   platform.c
- * author: li xianjing <xianjimli@hotmail.com>
- * brief:  platform dependent function of stm32
+ * File:   platform.c
+ * Author: AWTK Develop Team
+ * Brief:  platform dependent function of stm32
  *
- * copyright (c) 2018 - 2018 Guangzhou ZHIYUAN Electronics Co.,Ltd.
+ * Copyright (c) 2018 - 2018  Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *
  * this program is distributed in the hope that it will be useful,
  * but without any warranty; without even the implied warranty of

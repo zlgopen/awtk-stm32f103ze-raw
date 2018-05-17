@@ -1,9 +1,9 @@
 /**
- * file:   main_loop_stm32_raw.c
- * author: li xianjing <xianjimli@hotmail.com>
- * brief:  main loop for stm32
+ * File:   main_loop_stm32_raw.c
+ * Author: AWTK Develop Team
+ * Brief:  main loop for stm32
  *
- * copyright (c) 2018 - 2018 Guangzhou ZHIYUAN Electronics Co.,Ltd.
+ * Copyright (c) 2018 - 2018  Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *
  * this program is distributed in the hope that it will be useful,
  * but without any warranty; without even the implied warranty of
@@ -39,9 +39,7 @@
 #include "base/platform.h"
 #include "base/event_queue.h"
 #include "base/font_manager.h"
-#include "base/window_manager.h"
-
-static ret_t post_touch_events(main_loop_t* l, bool_t pressed, xy_t x, xy_t y);
+#include "main_loop/main_loop_simple.h"
 
 ret_t platform_disaptch_input(main_loop_t* l) { return RET_OK; }
 
@@ -52,9 +50,9 @@ void TIM3_IRQHandler(void) {
     TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 
     if (TOUCH_Scan() == 0) {
-      post_touch_events(main_loop(), TRUE, TouchData.lcdx, TouchData.lcdy);
+      main_loop_post_pointer_event(main_loop(), TRUE, TouchData.lcdx, TouchData.lcdy);
     } else {
-      post_touch_events(main_loop(), FALSE, TouchData.lcdx, TouchData.lcdy);
+      main_loop_post_pointer_event(main_loop(), FALSE, TouchData.lcdx, TouchData.lcdy);
     }
   }
 }
