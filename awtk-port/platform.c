@@ -33,7 +33,7 @@ static uint32_t s_heam_mem[2048];
 
 ret_t platform_prepare(void) {
   timer_init(get_time_ms);
-  mem_init(s_heam_mem, sizeof(s_heam_mem));
+  tk_mem_init(s_heam_mem, sizeof(s_heam_mem));
 
   return RET_OK;
 }

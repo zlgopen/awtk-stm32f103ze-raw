@@ -844,6 +844,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\main_loop\main_loop_simple.c</FilePath>
             </File>
+            <File>
+              <FileName>mutex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\platforms\raw\mutex.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
