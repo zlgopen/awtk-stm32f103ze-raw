@@ -19,20 +19,42 @@
  *
  */
 
-#include "delay.h"
+#include "sys.h"
 #include "base/mem.h"
 #include "base/timer.h"
 
-uint32_t get_time_ms() {
-  return RTC_GetCounter();
+void sys_tick_init() {
+  u8 fac_us = 0;
+  u16 fac_ms = 0;
+
+  SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
+  fac_us = SystemCoreClock / 8000000;
+
+  fac_ms = (u16)fac_us * 1000;
+
+  SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
+  SysTick->LOAD = fac_ms;
+  SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
 }
 
-void sleep_ms(uint32_t ms) { delay_ms(ms); }
+static uint32_t g_sys_tick;
+void SysTick_Handler(void) { g_sys_tick++; }
+uint32_t get_time_ms() { return g_sys_tick; }
+
+void sleep_ms(uint32_t ms) {
+  uint32_t count = 0;
+  uint32_t start = get_time_ms();
+
+  while (get_time_ms() < (start + ms)) {
+    count++;
+  }
+}
+
+void delay_ms(uint32_t ms) { sleep_ms(ms); }
 
 static uint32_t s_heam_mem[2048];
-
 ret_t platform_prepare(void) {
-  timer_init(get_time_ms);
+  sys_tick_init();
   tk_mem_init(s_heam_mem, sizeof(s_heam_mem));
 
   return RET_OK;

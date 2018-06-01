@@ -15,7 +15,6 @@ extern int gui_app_start(int lcd_w, int lcd_h);
 
 int main()
 {	
-  delay_init();
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
   led_init();
   button_init();
