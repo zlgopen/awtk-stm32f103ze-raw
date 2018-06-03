@@ -41,9 +41,13 @@
 #include "base/font_manager.h"
 #include "main_loop/main_loop_simple.h"
 
-ret_t platform_disaptch_input(main_loop_t* l) { return RET_OK; }
+ret_t platform_disaptch_input(main_loop_t* l) {
+  return RET_OK;
+}
 
-static lcd_t* platform_create_lcd(wh_t w, wh_t h) { return lcd_reg_create(w, h); }
+static lcd_t* platform_create_lcd(wh_t w, wh_t h) {
+  return lcd_reg_create(w, h);
+}
 
 void TIM3_IRQHandler(void) {
   if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) {

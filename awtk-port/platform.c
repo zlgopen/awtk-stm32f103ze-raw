@@ -23,7 +23,7 @@
 #include "base/mem.h"
 #include "base/timer.h"
 
-void sys_tick_init() {
+void delay_init(void) {
   u8 fac_us = 0;
   u16 fac_ms = 0;
 
@@ -37,24 +37,8 @@ void sys_tick_init() {
   SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
 }
 
-static uint32_t g_sys_tick;
-void SysTick_Handler(void) { g_sys_tick++; }
-uint32_t get_time_ms() { return g_sys_tick; }
-
-void sleep_ms(uint32_t ms) {
-  uint32_t count = 0;
-  uint32_t start = get_time_ms();
-
-  while (get_time_ms() < (start + ms)) {
-    count++;
-  }
-}
-
-void delay_ms(uint32_t ms) { sleep_ms(ms); }
-
 static uint32_t s_heam_mem[2048];
 ret_t platform_prepare(void) {
-  sys_tick_init();
   tk_mem_init(s_heam_mem, sizeof(s_heam_mem));
 
   return RET_OK;

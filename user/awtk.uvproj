@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>Target 1</TargetName>
+      <TargetName>awtk</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
@@ -362,7 +362,7 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -372,10 +372,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--gnu</MiscControls>
+              <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG, FAST_MODE,WITH_BITMAP_FONT,USE_GUI_MAIN</Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\SysTick;..\app\RTC_J;..\app\touch;..\awtk\src</IncludePath>
+              <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\SysTick;..\app\RTC_J;..\app\touch;..\awtk\src;..\awtk\3rd;..\awtk\</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -839,11 +839,6 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\main_loop\main_loop_simple.c</FilePath>
             </File>
-            <File>
-              <FileName>mutex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\platforms\raw\mutex.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -863,6 +858,16 @@
               <FileName>platform.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk-port\platform.c</FilePath>
+            </File>
+            <File>
+              <FileName>mutex_null.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\platforms\raw\mutex_null.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys_tick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\platforms\raw\sys_tick.c</FilePath>
             </File>
           </Files>
         </Group>
