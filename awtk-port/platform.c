@@ -23,7 +23,7 @@
 #include "base/mem.h"
 #include "base/timer.h"
 
-void delay_init(void) {
+void systick_init(void) {
   u8 fac_us = 0;
   u16 fac_ms = 0;
 

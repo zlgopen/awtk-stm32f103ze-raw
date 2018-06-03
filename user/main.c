@@ -11,12 +11,13 @@
 #include "usart.h"
 #include "lcd_driver.h"
 
+extern void systick_init(void);
 extern int gui_app_start(int lcd_w, int lcd_h);
 
 int main()
 {	
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-	delay_init();
+  systick_init();
   led_init();
   button_init();
   TFT_Init();
