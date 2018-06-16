@@ -139,7 +139,7 @@
           <Target>
             <UseTarget>1</UseTarget>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>0</RunToMain>
+            <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
             <RestoreWatchpoints>1</RestoreWatchpoints>
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
@@ -373,7 +373,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG, FAST_MODE,WITH_BITMAP_FONT,USE_GUI_MAIN</Define>
+              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG, FAST_MODE,WITH_BITMAP_FONT,USE_GUI_MAIN,WITH_LOW_RES</Define>
               <Undefine></Undefine>
               <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\SysTick;..\app\RTC_J;..\app\touch;..\awtk\src;..\awtk\3rd;..\awtk\</IncludePath>
             </VariousControls>
@@ -838,6 +838,36 @@
               <FileName>main_loop_simple.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\main_loop\main_loop_simple.c</FilePath>
+            </File>
+            <File>
+              <FileName>keyboard.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\keyboard.c</FilePath>
+            </File>
+            <File>
+              <FileName>pages.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\pages.c</FilePath>
+            </File>
+            <File>
+              <FileName>edit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\edit.c</FilePath>
+            </File>
+            <File>
+              <FileName>view.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\view.c</FilePath>
+            </File>
+            <File>
+              <FileName>velocity.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\velocity.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_factory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\widget_factory.c</FilePath>
             </File>
           </Files>
         </Group>
