@@ -869,6 +869,21 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\widget_factory.c</FilePath>
             </File>
+            <File>
+              <FileName>tokenizer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\tokenizer.c</FilePath>
+            </File>
+            <File>
+              <FileName>input_method.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\input_method.c</FilePath>
+            </File>
+            <File>
+              <FileName>input_method_null.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\input_methods\input_method_null.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
