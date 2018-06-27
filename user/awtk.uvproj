@@ -885,11 +885,6 @@
               <FilePath>..\awtk\src\input_methods\input_method_null.c</FilePath>
             </File>
             <File>
-              <FileName>candidates.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\candidates.c</FilePath>
-            </File>
-            <File>
               <FileName>input_engine_null.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\input_engines\input_engine_null.c</FilePath>
