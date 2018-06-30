@@ -894,6 +894,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\input_engine.c</FilePath>
             </File>
+            <File>
+              <FileName>spin_box.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\spin_box.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
