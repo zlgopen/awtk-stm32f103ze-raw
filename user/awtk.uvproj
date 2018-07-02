@@ -899,6 +899,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\spin_box.c</FilePath>
             </File>
+            <File>
+              <FileName>dragger.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\dragger.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
