@@ -904,6 +904,16 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\dragger.c</FilePath>
             </File>
+            <File>
+              <FileName>dialog_client.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\dialog_client.c</FilePath>
+            </File>
+            <File>
+              <FileName>dialog_title.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\dialog_title.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
