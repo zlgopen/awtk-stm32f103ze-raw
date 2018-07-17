@@ -914,6 +914,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\dialog_title.c</FilePath>
             </File>
+            <File>
+              <FileName>custom_props.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\custom_props.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
