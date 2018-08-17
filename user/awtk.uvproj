@@ -373,7 +373,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG, FAST_MODE,WITH_BITMAP_FONT,USE_GUI_MAIN,WITH_LOW_RES</Define>
+              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG, FAST_MODE,WITH_BITMAP_FONT,USE_GUI_MAIN,WITH_LOW_RES,WITH_NULL_IM</Define>
               <Undefine></Undefine>
               <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\SysTick;..\app\RTC_J;..\app\touch;..\awtk\src;..\awtk\3rd;..\awtk\</IncludePath>
             </VariousControls>
@@ -820,16 +820,6 @@
               <FilePath>..\awtk\src\base\image_loader.c</FilePath>
             </File>
             <File>
-              <FileName>tk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\tk.c</FilePath>
-            </File>
-            <File>
-              <FileName>locale.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\locale.c</FilePath>
-            </File>
-            <File>
               <FileName>str.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\str.c</FilePath>
@@ -880,11 +870,6 @@
               <FilePath>..\awtk\src\base\input_method.c</FilePath>
             </File>
             <File>
-              <FileName>input_method_null.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\input_methods\input_method_null.c</FilePath>
-            </File>
-            <File>
               <FileName>input_engine_null.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\input_engines\input_engine_null.c</FilePath>
@@ -918,6 +903,226 @@
               <FileName>custom_props.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\custom_props.c</FilePath>
+            </File>
+            <File>
+              <FileName>awtk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\awtk.c</FilePath>
+            </File>
+            <File>
+              <FileName>input_method_creator.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\input_methods\input_method_creator.c</FilePath>
+            </File>
+            <File>
+              <FileName>tklocale.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\tklocale.c</FilePath>
+            </File>
+            <File>
+              <FileName>button_group.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\button_group.c</FilePath>
+            </File>
+            <File>
+              <FileName>candidates.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\candidates.c</FilePath>
+            </File>
+            <File>
+              <FileName>color_parser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\color_parser.c</FilePath>
+            </File>
+            <File>
+              <FileName>combo_box.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\combo_box.c</FilePath>
+            </File>
+            <File>
+              <FileName>combo_box_item.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\combo_box_item.c</FilePath>
+            </File>
+            <File>
+              <FileName>easing.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\easing.c</FilePath>
+            </File>
+            <File>
+              <FileName>fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>glyph_cache.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\glyph_cache.c</FilePath>
+            </File>
+            <File>
+              <FileName>line_break.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\line_break.c</FilePath>
+            </File>
+            <File>
+              <FileName>list_item.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\list_item.c</FilePath>
+            </File>
+            <File>
+              <FileName>list_view.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\list_view.c</FilePath>
+            </File>
+            <File>
+              <FileName>list_view_h.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\list_view_h.c</FilePath>
+            </File>
+            <File>
+              <FileName>matrix.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\matrix.c</FilePath>
+            </File>
+            <File>
+              <FileName>popup.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\popup.c</FilePath>
+            </File>
+            <File>
+              <FileName>rom_fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\rom_fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>scroll_bar.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\scroll_bar.c</FilePath>
+            </File>
+            <File>
+              <FileName>scroll_view.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\scroll_view.c</FilePath>
+            </File>
+            <File>
+              <FileName>slide_view.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\slide_view.c</FilePath>
+            </File>
+            <File>
+              <FileName>suggest_words.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\suggest_words.c</FilePath>
+            </File>
+            <File>
+              <FileName>tab_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\tab_button.c</FilePath>
+            </File>
+            <File>
+              <FileName>tab_button_group.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\tab_button_group.c</FilePath>
+            </File>
+            <File>
+              <FileName>tab_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\tab_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_builder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\ui_builder.c</FilePath>
+            </File>
+            <File>
+              <FileName>vgcanvas.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\vgcanvas.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\widget_animator.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator_move.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\widget_animators\widget_animator_move.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator_opacity.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\widget_animators\widget_animator_opacity.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator_rotation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\widget_animators\widget_animator_rotation.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator_scale.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\widget_animators\widget_animator_scale.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator_scroll.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\widget_animators\widget_animator_scroll.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator_value.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\widget_animators\widget_animator_value.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_binary_writer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\ui_loader\ui_binary_writer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_builder_default.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\ui_loader\ui_builder_default.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_loader.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\ui_loader\ui_loader.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_loader_default.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\ui_loader\ui_loader_default.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_loader_xml.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\ui_loader\ui_loader_xml.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_serializer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\ui_loader\ui_serializer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_xml_writer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\ui_loader\ui_xml_writer.c</FilePath>
+            </File>
+            <File>
+              <FileName>window_open.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\ui_loader\window_open.c</FilePath>
+            </File>
+            <File>
+              <FileName>xml_builder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\xml\xml_builder.c</FilePath>
+            </File>
+            <File>
+              <FileName>xml_parser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\xml\xml_parser.c</FilePath>
             </File>
           </Files>
         </Group>
