@@ -770,11 +770,6 @@
               <FilePath>..\awtk\src\base\timer.c</FilePath>
             </File>
             <File>
-              <FileName>resource_manager.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\resource_manager.c</FilePath>
-            </File>
-            <File>
               <FileName>layout.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\layout.c</FilePath>
@@ -913,11 +908,6 @@
               <FileName>input_method_creator.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\input_methods\input_method_creator.c</FilePath>
-            </File>
-            <File>
-              <FileName>tklocale.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\tklocale.c</FilePath>
             </File>
             <File>
               <FileName>button_group.c</FileName>
@@ -1129,6 +1119,16 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\color_tile.c</FilePath>
             </File>
+            <File>
+              <FileName>assets_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\assets_manager.c</FilePath>
+            </File>
+            <File>
+              <FileName>locale_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\locale_info.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1175,9 +1175,9 @@
               <FilePath>..\awtk\demos\demo1_app.c</FilePath>
             </File>
             <File>
-              <FileName>resource-mini.c</FileName>
+              <FileName>assets-mini.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\awtk\demos\resource-mini.c</FilePath>
+              <FilePath>..\awtk\demos\assets-mini.c</FilePath>
             </File>
           </Files>
         </Group>
