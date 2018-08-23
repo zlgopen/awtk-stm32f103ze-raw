@@ -1124,6 +1124,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\xml\xml_parser.c</FilePath>
             </File>
+            <File>
+              <FileName>color_tile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\color_tile.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
