@@ -825,11 +825,6 @@
               <FilePath>..\awtk\src\main_loop\main_loop_simple.c</FilePath>
             </File>
             <File>
-              <FileName>keyboard.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\keyboard.c</FilePath>
-            </File>
-            <File>
               <FileName>pages.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\pages.c</FilePath>
@@ -915,11 +910,6 @@
               <FilePath>..\awtk\src\base\button_group.c</FilePath>
             </File>
             <File>
-              <FileName>candidates.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\candidates.c</FilePath>
-            </File>
-            <File>
               <FileName>color_parser.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\color_parser.c</FilePath>
@@ -955,21 +945,6 @@
               <FilePath>..\awtk\src\base\line_break.c</FilePath>
             </File>
             <File>
-              <FileName>list_item.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\list_item.c</FilePath>
-            </File>
-            <File>
-              <FileName>list_view.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\list_view.c</FilePath>
-            </File>
-            <File>
-              <FileName>list_view_h.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\list_view_h.c</FilePath>
-            </File>
-            <File>
               <FileName>matrix.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\matrix.c</FilePath>
@@ -983,21 +958,6 @@
               <FileName>rom_fs.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\rom_fs.c</FilePath>
-            </File>
-            <File>
-              <FileName>scroll_bar.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\scroll_bar.c</FilePath>
-            </File>
-            <File>
-              <FileName>scroll_view.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\scroll_view.c</FilePath>
-            </File>
-            <File>
-              <FileName>slide_view.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\slide_view.c</FilePath>
             </File>
             <File>
               <FileName>suggest_words.c</FileName>
