@@ -1089,6 +1089,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\locale_info.c</FilePath>
             </File>
+            <File>
+              <FileName>path.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\path.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1118,6 +1123,11 @@
               <FileName>sys_tick.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\platforms\raw\sys_tick.c</FilePath>
+            </File>
+            <File>
+              <FileName>fs_os.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\platforms\raw\fs_os.c</FilePath>
             </File>
           </Files>
         </Group>
