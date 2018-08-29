@@ -1094,6 +1094,26 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\path.c</FilePath>
             </File>
+            <File>
+              <FileName>app_bar.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\app_bar.c</FilePath>
+            </File>
+            <File>
+              <FileName>column.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\column.c</FilePath>
+            </File>
+            <File>
+              <FileName>grid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\grid.c</FilePath>
+            </File>
+            <File>
+              <FileName>row.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\row.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
