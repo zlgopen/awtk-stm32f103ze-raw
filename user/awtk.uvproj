@@ -375,7 +375,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,NDEBUG,HAS_AWTK_CONFIG</Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\SysTick;..\app\RTC_J;..\app\touch;..\awtk\src;..\awtk\3rd;..\awtk\</IncludePath>
+              <IncludePath>..\stm32f10x_fwlib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\user;..\core;..\app\led;..\app\beep;..\app\button;..\app\exti;..\app\iwdg;..\app\wwdg;..\app\tim;..\app\tpad;..\app\lcd;..\app\gui;..\USMART;..\app\rtc;..\app\wkup;..\app\adc;..\app\tsensor;..\app\dac;..\app\dma;..\app\AT24Cxx;..\app\IIC(24C02);..\app\spi;..\app\W25QXX;..\app\rs485;..\app\can;..\app\DS18B20;..\app\DHT11;..\app\adxl345;..\app\nrf24l01;..\app\stm32_flash;..\app\sram;..\app\malloc;..\app\SysTick;..\app\RTC_J;..\app\touch;..\awtk\src;..\awtk\3rd;..\awtk\;..\awtk-port\</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
