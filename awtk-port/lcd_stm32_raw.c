@@ -26,9 +26,12 @@
 #include "lcd/lcd_reg.h"
 
 typedef uint16_t pixel_t;
+#define pixel_from_rgb(r, g, b) ((((r) >> 3) << 11) | (((g) >> 2) << 5) | ((b) >> 3))
+#define pixel_to_rgba(p) {(0xff & ((p >> 11) << 3)), (0xff & ((p >> 5) << 2)), (0xff & (p << 3))}
+
 #define set_window_func TFT_SetWindow
 #define write_data_func TFT_WriteData
 
-#include "blend/rgb565.inc"
+#include "base/pixel.h"
 #include "blend/pixel_ops.inc"
 #include "lcd/lcd_reg.inc"

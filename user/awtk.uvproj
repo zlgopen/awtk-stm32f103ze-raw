@@ -1114,6 +1114,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\row.c</FilePath>
             </File>
+            <File>
+              <FileName>calibration_win.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\calibration_win.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
