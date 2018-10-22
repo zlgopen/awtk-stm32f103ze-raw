@@ -750,11 +750,6 @@
               <FilePath>..\awtk\src\base\wstr.c</FilePath>
             </File>
             <File>
-              <FileName>font_bitmap.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\font\font_bitmap.c</FilePath>
-            </File>
-            <File>
               <FileName>utils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\utils.c</FilePath>
@@ -1118,6 +1113,26 @@
               <FileName>calibration_win.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\calibration_win.c</FilePath>
+            </File>
+            <File>
+              <FileName>font_loader_bitmap.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\font_loader\font_loader_bitmap.c</FilePath>
+            </File>
+            <File>
+              <FileName>font_loader.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\font_loader.c</FilePath>
+            </File>
+            <File>
+              <FileName>window_base.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\window_base.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator_factory_null.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\widget_animator_factory_null.c</FilePath>
             </File>
           </Files>
         </Group>

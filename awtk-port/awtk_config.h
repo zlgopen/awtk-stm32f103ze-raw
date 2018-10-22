@@ -40,4 +40,10 @@
  */
 #define WITH_NULL_IM 1
 
+/**
+ * 如果禁用控件动画，请定义本宏
+ *
+ */
+#define WITHOUT_WIDGET_ANIMATOR 1
+
 #endif/*AWTK_CONFIG_H*/
