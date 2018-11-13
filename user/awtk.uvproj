@@ -795,11 +795,6 @@
               <FilePath>..\awtk\src\base\idle.c</FilePath>
             </File>
             <File>
-              <FileName>time.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\time.c</FilePath>
-            </File>
-            <File>
               <FileName>system_info.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\system_info.c</FilePath>
@@ -1133,6 +1128,31 @@
               <FileName>widget_animator_factory_null.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\widget_animator_factory_null.c</FilePath>
+            </File>
+            <File>
+              <FileName>time_now.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\time_now.c</FilePath>
+            </File>
+            <File>
+              <FileName>style.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\style.c</FilePath>
+            </File>
+            <File>
+              <FileName>style_const.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\style_const.c</FilePath>
+            </File>
+            <File>
+              <FileName>style_factory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\style_factory.c</FilePath>
+            </File>
+            <File>
+              <FileName>widget_animator_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\widget_animator_manager.c</FilePath>
             </File>
           </Files>
         </Group>
