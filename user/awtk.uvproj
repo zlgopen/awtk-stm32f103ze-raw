@@ -1154,6 +1154,21 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\widget_animator_manager.c</FilePath>
             </File>
+            <File>
+              <FileName>clip_board_default.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\clip_board\clip_board_default.c</FilePath>
+            </File>
+            <File>
+              <FileName>clip_board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\clip_board.c</FilePath>
+            </File>
+            <File>
+              <FileName>image_base.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\image_base.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
