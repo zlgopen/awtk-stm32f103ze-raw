@@ -1169,6 +1169,21 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\image_base.c</FilePath>
             </File>
+            <File>
+              <FileName>grid_item.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\grid_item.c</FilePath>
+            </File>
+            <File>
+              <FileName>input_device_status.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\input_device_status.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_bar.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\system_bar.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
