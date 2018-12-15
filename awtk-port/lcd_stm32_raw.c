@@ -22,7 +22,7 @@
 #include "gui.h"
 #include "lcd_driver.h"
 
-#include "base/mem.h"
+#include "tkc/mem.h"
 #include "lcd/lcd_reg.h"
 
 typedef uint16_t pixel_t;

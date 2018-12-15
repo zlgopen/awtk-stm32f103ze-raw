@@ -46,4 +46,6 @@
  */
 #define WITHOUT_WIDGET_ANIMATOR 1
 
+#define WITHOUT_EXT_WIDGETS 1
+
 #endif/*AWTK_CONFIG_H*/

@@ -36,7 +36,7 @@
 #include "base/timer.h"
 #include "lcd/lcd_reg.h"
 #include "base/main_loop.h"
-#include "base/platform.h"
+#include "tkc/platform.h"
 #include "base/event_queue.h"
 #include "base/font_manager.h"
 #include "main_loop/main_loop_simple.h"

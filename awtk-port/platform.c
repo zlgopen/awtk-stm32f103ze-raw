@@ -20,7 +20,7 @@
  */
 
 #include "sys.h"
-#include "base/mem.h"
+#include "tkc/mem.h"
 #include "base/timer.h"
 
 void systick_init(void) {
