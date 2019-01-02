@@ -1598,7 +1598,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\awtk\src\ui_loader\ui_loader.c</PathWithFileName>
+      <PathWithFileName>..\awtk\src\base\ui_loader.c</PathWithFileName>
       <FilenameWithoutPath>ui_loader.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
