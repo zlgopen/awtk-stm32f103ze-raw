@@ -1194,6 +1194,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\tkc\func_call_parser.c</FilePath>
             </File>
+            <File>
+              <FileName>event.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\event.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
