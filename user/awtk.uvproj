@@ -1199,6 +1199,21 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\tkc\event.c</FilePath>
             </File>
+            <File>
+              <FileName>named_value.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\named_value.c</FilePath>
+            </File>
+            <File>
+              <FileName>object.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\object.c</FilePath>
+            </File>
+            <File>
+              <FileName>object_default.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\object_default.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
