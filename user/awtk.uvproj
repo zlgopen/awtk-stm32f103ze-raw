@@ -1214,6 +1214,31 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\tkc\object_default.c</FilePath>
             </File>
+            <File>
+              <FileName>timer_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\timer_info.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\timer_manager.c</FilePath>
+            </File>
+            <File>
+              <FileName>idle_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\idle_manager.c</FilePath>
+            </File>
+            <File>
+              <FileName>idle_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\idle_info.c</FilePath>
+            </File>
+            <File>
+              <FileName>slist.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\slist.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
