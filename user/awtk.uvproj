@@ -1239,6 +1239,16 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\tkc\slist.c</FilePath>
             </File>
+            <File>
+              <FileName>widget_pool.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\widget_pool.c</FilePath>
+            </File>
+            <File>
+              <FileName>darray.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\darray.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
