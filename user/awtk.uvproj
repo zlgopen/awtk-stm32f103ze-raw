@@ -875,11 +875,6 @@
               <FilePath>..\awtk\src\widgets\dialog_title.c</FilePath>
             </File>
             <File>
-              <FileName>custom_props.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\base\custom_props.c</FilePath>
-            </File>
-            <File>
               <FileName>awtk_global.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\awtk_global.c</FilePath>
@@ -1243,6 +1238,11 @@
               <FileName>darray.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\tkc\darray.c</FilePath>
+            </File>
+            <File>
+              <FileName>expr_eval.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\expr_eval.c</FilePath>
             </File>
           </Files>
         </Group>
