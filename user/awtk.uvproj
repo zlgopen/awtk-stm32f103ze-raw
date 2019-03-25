@@ -1244,6 +1244,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\tkc\expr_eval.c</FilePath>
             </File>
+            <File>
+              <FileName>lcd_profile.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\lcd_profile.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
