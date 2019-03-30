@@ -780,11 +780,6 @@
               <FilePath>..\awtk\src\base\window_animator.c</FilePath>
             </File>
             <File>
-              <FileName>window_animator_null.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\window_animators\window_animator_null.c</FilePath>
-            </File>
-            <File>
               <FileName>idle.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\idle.c</FilePath>
@@ -1248,6 +1243,21 @@
               <FileName>lcd_profile.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\lcd_profile.c</FilePath>
+            </File>
+            <File>
+              <FileName>window_animator_factory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\window_animator_factory.c</FilePath>
+            </File>
+            <File>
+              <FileName>dialog_highlighter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\dialog_highlighter.c</FilePath>
+            </File>
+            <File>
+              <FileName>dialog_highlighter_factory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\dialog_highlighter_factory.c</FilePath>
             </File>
           </Files>
         </Group>
