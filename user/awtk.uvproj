@@ -1145,19 +1145,9 @@
               <FilePath>..\awtk\src\layouters\children_layouter_default.c</FilePath>
             </File>
             <File>
-              <FileName>children_layouter_factory.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\layouters\children_layouter_factory.c</FilePath>
-            </File>
-            <File>
               <FileName>self_layouter_default.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\layouters\self_layouter_default.c</FilePath>
-            </File>
-            <File>
-              <FileName>self_layouter_factory.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\awtk\src\layouters\self_layouter_factory.c</FilePath>
             </File>
             <File>
               <FileName>children_layouter.c</FileName>
@@ -1258,6 +1248,36 @@
               <FileName>dialog_highlighter_factory.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\dialog_highlighter_factory.c</FilePath>
+            </File>
+            <File>
+              <FileName>children_layouter_builtins.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\layouters\children_layouter_builtins.c</FilePath>
+            </File>
+            <File>
+              <FileName>children_layouter_parser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\layouters\children_layouter_parser.c</FilePath>
+            </File>
+            <File>
+              <FileName>self_layouter_builtins.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\layouters\self_layouter_builtins.c</FilePath>
+            </File>
+            <File>
+              <FileName>self_layouter_parser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\layouters\self_layouter_parser.c</FilePath>
+            </File>
+            <File>
+              <FileName>children_layouter_factory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\children_layouter_factory.c</FilePath>
+            </File>
+            <File>
+              <FileName>self_layouter_factory.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\self_layouter_factory.c</FilePath>
             </File>
           </Files>
         </Group>
