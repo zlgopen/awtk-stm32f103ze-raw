@@ -1279,6 +1279,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\self_layouter_factory.c</FilePath>
             </File>
+            <File>
+              <FileName>overlay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\widgets\overlay.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
