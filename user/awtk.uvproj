@@ -1284,6 +1284,26 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\widgets\overlay.c</FilePath>
             </File>
+            <File>
+              <FileName>shortcut.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\shortcut.c</FilePath>
+            </File>
+            <File>
+              <FileName>style_mutable.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\style_mutable.c</FilePath>
+            </File>
+            <File>
+              <FileName>int_str.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\int_str.c</FilePath>
+            </File>
+            <File>
+              <FileName>str_str.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\tkc\str_str.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
