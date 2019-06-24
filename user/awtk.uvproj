@@ -1304,6 +1304,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\tkc\str_str.c</FilePath>
             </File>
+            <File>
+              <FileName>text_edit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\text_edit.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
