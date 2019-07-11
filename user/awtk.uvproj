@@ -1314,6 +1314,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\layouters\self_layouter_menu.c</FilePath>
             </File>
+            <File>
+              <FileName>hscrollable.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\hscrollable.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
