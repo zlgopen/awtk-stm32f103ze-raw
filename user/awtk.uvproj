@@ -1319,6 +1319,21 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\hscrollable.c</FilePath>
             </File>
+            <File>
+              <FileName>native_window.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\base\native_window.c</FilePath>
+            </File>
+            <File>
+              <FileName>native_window_raw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\native_window\native_window_raw.c</FilePath>
+            </File>
+            <File>
+              <FileName>window_manager_default.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\window_manager\window_manager_default.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
