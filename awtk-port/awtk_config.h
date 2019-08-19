@@ -44,7 +44,19 @@
  * 如果禁用控件动画，请定义本宏
  *
  */
-#define WITHOUT_WIDGET_ANIMATOR 1
+#define WITHOUT_WIDGET_ANIMATORS 1
+
+/**
+ * 如果禁用窗口动画，请定义本宏
+ *
+ */
+#define WITHOUT_WINDOW_ANIMATORS 1
+
+/**
+ * 如果对话框高亮策略，请定义本宏
+ *
+ */
+#define WITHOUT_DIALOG_HIGHLIGHTER 1
 
 #define WITHOUT_EXT_WIDGETS 1
 
