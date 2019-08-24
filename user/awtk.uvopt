@@ -623,7 +623,7 @@
 
   <Group>
     <GroupName>awtk</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -2038,7 +2038,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\awtk\src\base\timer_info.c</PathWithFileName>
+      <PathWithFileName>..\awtk\src\tkc\timer_info.c</PathWithFileName>
       <FilenameWithoutPath>timer_info.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2050,7 +2050,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\awtk\src\base\timer_manager.c</PathWithFileName>
+      <PathWithFileName>..\awtk\src\tkc\timer_manager.c</PathWithFileName>
       <FilenameWithoutPath>timer_manager.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2062,7 +2062,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\awtk\src\base\idle_manager.c</PathWithFileName>
+      <PathWithFileName>..\awtk\src\tkc\idle_manager.c</PathWithFileName>
       <FilenameWithoutPath>idle_manager.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -2074,7 +2074,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\awtk\src\base\idle_info.c</PathWithFileName>
+      <PathWithFileName>..\awtk\src\tkc\idle_info.c</PathWithFileName>
       <FilenameWithoutPath>idle_info.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
