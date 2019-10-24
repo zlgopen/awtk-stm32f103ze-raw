@@ -1344,6 +1344,46 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\ui_feedback.c</FilePath>
             </File>
+            <File>
+              <FileName>emojidef.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\3rd\libunibreak\emojidef.c</FilePath>
+            </File>
+            <File>
+              <FileName>graphemebreak.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\3rd\libunibreak\graphemebreak.c</FilePath>
+            </File>
+            <File>
+              <FileName>linebreak.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\3rd\libunibreak\linebreak.c</FilePath>
+            </File>
+            <File>
+              <FileName>linebreakdata.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\3rd\libunibreak\linebreakdata.c</FilePath>
+            </File>
+            <File>
+              <FileName>linebreakdef.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\3rd\libunibreak\linebreakdef.c</FilePath>
+            </File>
+            <File>
+              <FileName>unibreakbase.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\3rd\libunibreak\unibreakbase.c</FilePath>
+            </File>
+            <File>
+              <FileName>unibreakdef.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\3rd\libunibreak\unibreakdef.c</FilePath>
+            </File>
+            <File>
+              <FileName>wordbreak.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\3rd\libunibreak\wordbreak.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

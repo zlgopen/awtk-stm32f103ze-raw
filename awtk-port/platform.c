@@ -37,7 +37,7 @@ void systick_init(void) {
   SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
 }
 
-static uint32_t s_heam_mem[2048];
+static uint32_t s_heam_mem[2048 * 2];
 ret_t platform_prepare(void) {
   tk_mem_init(s_heam_mem, sizeof(s_heam_mem));
 
