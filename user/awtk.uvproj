@@ -1389,6 +1389,11 @@
               <FileType>1</FileType>
               <FilePath>..\awtk\src\base\graphic_buffer.c</FilePath>
             </File>
+            <File>
+              <FileName>graphic_buffer_default.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\graphic_buffer\graphic_buffer_default.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
