@@ -599,6 +599,11 @@
               <FileType>1</FileType>
               <FilePath>..\app\touch\flash.c</FilePath>
             </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\system\delay\delay.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1393,6 +1398,11 @@
               <FileName>graphic_buffer_default.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\awtk\src\graphic_buffer\graphic_buffer_default.c</FilePath>
+            </File>
+            <File>
+              <FileName>digit_clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk\src\widgets\digit_clock.c</FilePath>
             </File>
           </Files>
         </Group>
