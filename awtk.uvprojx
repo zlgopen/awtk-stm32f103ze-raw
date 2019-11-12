@@ -1186,26 +1186,6 @@
               <FilePath>.\awtk\src\native_window\native_window_raw.c</FilePath>
             </File>
             <File>
-              <FileName>cond_var_null.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\cond_var_null.c</FilePath>
-            </File>
-            <File>
-              <FileName>fs_os.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\fs_os.c</FilePath>
-            </File>
-            <File>
-              <FileName>mutex_null.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\mutex_null.c</FilePath>
-            </File>
-            <File>
-              <FileName>sys_tick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\sys_tick.c</FilePath>
-            </File>
-            <File>
               <FileName>ui_binary_writer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\awtk\src\ui_loader\ui_binary_writer.c</FilePath>
@@ -1504,6 +1484,26 @@
               <FileName>SysTick.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\awtk-port\SysTick.c</FilePath>
+            </File>
+            <File>
+              <FileName>cond_var_null.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\platforms\raw\cond_var_null.c</FilePath>
+            </File>
+            <File>
+              <FileName>fs_os.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\platforms\raw\fs_os.c</FilePath>
+            </File>
+            <File>
+              <FileName>mutex_null.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\platforms\raw\mutex_null.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys_tick_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\platforms\raw\sys_tick_handler.c</FilePath>
             </File>
           </Files>
         </Group>
