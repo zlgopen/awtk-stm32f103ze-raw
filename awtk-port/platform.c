@@ -19,26 +19,11 @@
  *
  */
 
-#include "sys.h"
 #include "tkc/mem.h"
 #include "base/timer.h"
 
-void systick_init(void) {
-  u8 fac_us = 0;
-  u16 fac_ms = 0;
-
-  SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
-  fac_us = SystemCoreClock / 8000000;
-
-  fac_ms = (u16)fac_us * 1000;
-
-  SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
-  SysTick->LOAD = fac_ms;
-  SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
-}
-
-static uint32_t s_heam_mem[2048 * 2];
 ret_t platform_prepare(void) {
+	static uint32_t s_heam_mem[2048 * 3];
   tk_mem_init(s_heam_mem, sizeof(s_heam_mem));
 
   return RET_OK;

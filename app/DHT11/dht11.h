@@ -1,8 +1,9 @@
 #ifndef _dht11_H
 #define _dht11_H
 
-#include "sys.h"
-#include "delay.h"
+#include "system.h"
+#include "SysTick.h"
+
 
 #define DHT11 (GPIO_Pin_11) //PG11
 #define GPIO_DHT11 GPIOG

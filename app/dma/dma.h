@@ -1,9 +1,10 @@
 #ifndef _dma_H
 #define _dma_H
 
-#include "sys.h"
-#include "delay.h"
-void dma_init(DMA_Channel_TypeDef* DMA_CHx,u32 cpar,u32 cmar,u16 cndtr);
-void DMA_Enable(DMA_Channel_TypeDef* DMA_CHx);  //开启DMA一次传输
+#include "system.h"
+
+
+void DMAx_Init(DMA_Channel_TypeDef* DMAy_Channelx,u32 par,u32 mar,u16 ndtr);//配置DMAx_CHx
+void DMAx_Enable(DMA_Channel_TypeDef *DMAy_Channelx,u16 ndtr);	//使能一次DMA传输
 
 #endif

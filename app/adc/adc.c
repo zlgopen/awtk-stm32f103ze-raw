@@ -1,76 +1,65 @@
 #include "adc.h"
+#include "SysTick.h"
 
-void adc_init()
+/*******************************************************************************
+* 函 数 名         : ADCx_Init
+* 函数功能		   : ADC初始化	
+* 输    入         : 无
+* 输    出         : 无
+*******************************************************************************/
+void ADCx_Init(void)
 {
-	GPIO_InitTypeDef  GPIO_InitStructure;
-	ADC_InitTypeDef ADC_InitStructure;	
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_ADC1, ENABLE); //使能ADC时钟和PA口时钟
-	RCC_ADCCLKConfig(RCC_PCLK2_Div6);  //设置 ADC 时钟（ ADCCLK） 72/6=12M
+	GPIO_InitTypeDef GPIO_InitStructure; //定义结构体变量	
+	ADC_InitTypeDef       ADC_InitStructure;
+	
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_ADC1,ENABLE);
+	
+	RCC_ADCCLKConfig(RCC_PCLK2_Div6);//设置ADC分频因子6 72M/6=12,ADC最大时间不能超过14M
+	
+	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_1;//ADC
+	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_AIN;	//模拟输入
+	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA,&GPIO_InitStructure);
+	
+	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
+	ADC_InitStructure.ADC_ScanConvMode = DISABLE;//非扫描模式	
+	ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;//关闭连续转换
+	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;//禁止触发检测，使用软件触发
+	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;//右对齐	
+	ADC_InitStructure.ADC_NbrOfChannel = 1;//1个转换在规则序列中 也就是只转换规则序列1 
+	ADC_Init(ADC1, &ADC_InitStructure);//ADC初始化
+	
+	ADC_Cmd(ADC1, ENABLE);//开启AD转换器
+	
+	ADC_ResetCalibration(ADC1);//重置指定的ADC的校准寄存器
+	while(ADC_GetResetCalibrationStatus(ADC1));//获取ADC重置校准寄存器的状态
+	
+	ADC_StartCalibration(ADC1);//开始指定ADC的校准状态
+	while(ADC_GetCalibrationStatus(ADC1));//获取指定ADC的校准程序
 
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;			   
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN; 	 //模拟输入模式
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-	ADC_DeInit(ADC1);	   //将外设 ADCx 的全部寄存器重设为缺省值
-	ADC_InitStructure.ADC_Mode=ADC_Mode_Independent;   //ADC工作模式 独立模式
-	ADC_InitStructure.ADC_ScanConvMode=DISABLE; //ADC通道扫描模式，单通道扫描
-	ADC_InitStructure.ADC_ContinuousConvMode=DISABLE; //ADC连续扫描还是单次模式，单次扫描
-	ADC_InitStructure.ADC_ExternalTrigConv=ADC_ExternalTrigConv_None; //ADC触发方式 使用软件触发
-	ADC_InitStructure.ADC_DataAlign=ADC_DataAlign_Right; //ADC数据对其方式 使用数据右对齐
-	ADC_InitStructure.ADC_NbrOfChannel=1; //ADC规则转换通道数 1个
-	ADC_Init(ADC1,&ADC_InitStructure);
-
-	ADC_Cmd(ADC1,ENABLE);  //使能ADC1
-	ADC_ResetCalibration(ADC1);  // 重置指定的 ADC 的校准寄存器
-	while(ADC_GetResetCalibrationStatus(ADC1));	//获取 ADC 重置校准寄存器的状态
-	ADC_StartCalibration(ADC1);  //开始指定 ADC 的校准状态
-	while(ADC_GetCalibrationStatus(ADC1));	//获取指定 ADC 的校准程序
-			
+	ADC_SoftwareStartConvCmd(ADC1, ENABLE);//使能或者失能指定的ADC的软件转换启动功能
 }
 
-void adc5_init()
+/*******************************************************************************
+* 函 数 名         : Get_ADC_Value
+* 函数功能		   : 获取通道ch的转换值，取times次,然后平均 	
+* 输    入         : ch:通道编号
+					 times:获取次数
+* 输    出         : 通道ch的times次转换结果平均值
+*******************************************************************************/
+u16 Get_ADC_Value(u8 ch,u8 times)
 {
-	GPIO_InitTypeDef  GPIO_InitStructure;
-	ADC_InitTypeDef ADC_InitStructure;	
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_ADC1, ENABLE); //使能ADC时钟和PA口时钟
-	RCC_ADCCLKConfig(RCC_PCLK2_Div6);  //设置 ADC 时钟（ ADCCLK） 72/6=12M
-
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;			   
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN; 	 //模拟输入模式
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-	ADC_DeInit(ADC1);	   //将外设 ADCx 的全部寄存器重设为缺省值
-	ADC_InitStructure.ADC_Mode=ADC_Mode_Independent;   //ADC工作模式 独立模式
-	ADC_InitStructure.ADC_ScanConvMode=DISABLE; //ADC通道扫描模式，单通道扫描
-	ADC_InitStructure.ADC_ContinuousConvMode=DISABLE; //ADC连续扫描还是单次模式，单次扫描
-	ADC_InitStructure.ADC_ExternalTrigConv=ADC_ExternalTrigConv_None; //ADC触发方式 使用软件触发
-	ADC_InitStructure.ADC_DataAlign=ADC_DataAlign_Right; //ADC数据对其方式 使用数据右对齐
-	ADC_InitStructure.ADC_NbrOfChannel=1; //ADC规则转换通道数 1个
-	ADC_Init(ADC1,&ADC_InitStructure);
-
-	ADC_Cmd(ADC1,ENABLE);  //使能ADC1
-	ADC_ResetCalibration(ADC1);  // 重置指定的 ADC 的校准寄存器
-	while(ADC_GetResetCalibrationStatus(ADC1));	//获取 ADC 重置校准寄存器的状态
-	ADC_StartCalibration(ADC1);  //开始指定 ADC 的校准状态
-	while(ADC_GetCalibrationStatus(ADC1));	//获取指定 ADC 的校准程序
-			
-}
-u16 ADC_Getvalue(u8 ch) //获取ADC转换值	 ch:0-3(ADC_Channel_0  --  ADC_Channel_17)
-{
-	ADC_RegularChannelConfig(ADC1,ch,1,ADC_SampleTime_239Cycles5);//设置ADC规则通道及采样时间
-	ADC_SoftwareStartConvCmd(ADC1,ENABLE); //ADC开始软件转换
-	while(!ADC_GetFlagStatus(ADC1,ADC_FLAG_EOC));  //等待转换完成
-	return ADC_GetConversionValue(ADC1);	 //返回最近一次转换结果			
-}
-u16 ADC_Get_Average(u8 ch,u8 time)  //求取读取多次通道ADC转换的平均值
-{
-	u8 i;
-	u32 temp=0;
-	for(i=0;i<time;i++)
+	u32 temp_val=0;
+	u8 t;
+	//设置指定ADC的规则组通道，一个序列，采样时间
+	ADC_RegularChannelConfig(ADC1, ch, 1, ADC_SampleTime_239Cycles5);	//ADC1,ADC通道,239个周期,提高采样时间可以提高精确度			    
+	
+	for(t=0;t<times;t++)
 	{
-		temp+=ADC_Getvalue(ch);	
-		delay_ms(5);	//间隔点时间采样
+		ADC_SoftwareStartConvCmd(ADC1, ENABLE);//使能指定的ADC1的软件转换启动功能	
+		while(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ));//等待转换结束
+		temp_val+=ADC_GetConversionValue(ADC1);
+		delay_ms(5);
 	}
-	return (u16)(temp/time);		
-}
-
+	return temp_val/times;
+} 

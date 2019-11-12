@@ -1,13 +1,31 @@
 #include "iwdg.h"
-void iwdg_init(u8 prer,u16 rlr)
+
+/*******************************************************************************
+* 函 数 名         : IWDG_Init
+* 函数功能		   : IWDG初始化
+* 输    入         : pre:预分频系数(0-6)
+					 rlr:重装载值(12位范围0xfff)
+					 独立看门狗复位时间计算公式：t=(4*2^pre*rlr)/40
+* 输    出         : 无
+*******************************************************************************/
+void IWDG_Init(u8 pre,u16 rlr)
 {
-	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);//使能对寄存器 IWDG_PR 和 IWDG_RLR 的写操作
-	IWDG_SetPrescaler(prer);   //设置看门狗分频系数 0-7
-   	IWDG_SetReload(rlr);		//设置看门狗重装载初值
-	IWDG_ReloadCounter();	//按照 IWDG 重装载寄存器的值重装载 IWDG 计数器
-	IWDG_Enable();			//使能 IWDG
+	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable); //取消寄存器写保护
+	IWDG_SetPrescaler(pre);//设置预分频系数 0-6
+	IWDG_SetReload(rlr);//设置重装载值
+	IWDG_ReloadCounter();  //重装载初值
+	IWDG_Enable(); //打开独立看门狗
+	
 }
-void iwdg_feed()  
+
+/*******************************************************************************
+* 函 数 名         : IWDG_FeedDog
+* 函数功能		   : 喂狗
+* 输    入         : 无
+* 输    出         : 无
+*******************************************************************************/
+void IWDG_FeedDog(void)  //喂狗
 {
-	IWDG_ReloadCounter();	
+	IWDG_ReloadCounter();  //重装载初值
 }
+

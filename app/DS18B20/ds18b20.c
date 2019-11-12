@@ -1,43 +1,63 @@
 #include "ds18b20.h"
+#include "SysTick.h"
+
 
 /*******************************************************************************
-* 函 数 名         : ds18b20_init
-* 函数功能		   : IO端口时钟初始化函数	   
+* 函 数 名         : DS18B20_IO_IN
+* 函数功能		   : DS18B20_IO输入配置	   
 * 输    入         : 无
-* 输    出         : 0:检测到DS18B20，1：没有检测到
+* 输    出         : 无
 *******************************************************************************/
-u8 ds18b20_init()
+void DS18B20_IO_IN(void)
 {
-	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitTypeDef  GPIO_InitStructure;
+	
+	GPIO_InitStructure.GPIO_Pin=DS18B20_PIN;
+	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IPU;
+	GPIO_Init(DS18B20_PORT,&GPIO_InitStructure);
+}
 
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOG,ENABLE);
-
-	GPIO_InitStructure.GPIO_Pin=dq;
-	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+/*******************************************************************************
+* 函 数 名         : DS18B20_IO_OUT
+* 函数功能		   : DS18B20_IO输出配置	   
+* 输    入         : 无
+* 输    出         : 无
+*******************************************************************************/
+void DS18B20_IO_OUT(void)
+{
+	GPIO_InitTypeDef  GPIO_InitStructure;
+	
+	GPIO_InitStructure.GPIO_Pin=DS18B20_PIN;
 	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
-	GPIO_Init(GPIO_ds18b20,&GPIO_InitStructure);
-	GPIO_SetBits(GPIO_ds18b20,dq);	   //拉高
-
-	ds18b20rst();	  //发送一个初始化脉冲等待DS18B20应答
-	return ds18b20_Check();
+	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
+	GPIO_Init(DS18B20_PORT,&GPIO_InitStructure);
 }
 
-void ds18b20rst()
-{
-	DQOUTINT();//输出
-	ds18b20_dq_L;
-	delay_us(750);//延时750微妙	
-	ds18b20_dq_H;
-	delay_us(15);//延时15微妙
+/*******************************************************************************
+* 函 数 名         : DS18B20_Reset
+* 函数功能		   : 复位DS18B20  
+* 输    入         : 无
+* 输    出         : 无
+*******************************************************************************/
+void DS18B20_Reset(void)	   
+{                 
+	DS18B20_IO_OUT(); //SET PG11 OUTPUT
+	DS18B20_DQ_OUT=0; //拉低DQ
+	delay_us(750);    //拉低750us
+	DS18B20_DQ_OUT=1; //DQ=1 
+	delay_us(15);     //15US
 }
 
-//等待DS18B20的回应
-//返回1:未检测到DS18B20的存在
-//返回0:存在
-u8 ds18b20_Check(void) 	   
+/*******************************************************************************
+* 函 数 名         : DS18B20_Check
+* 函数功能		   : 检测DS18B20是否存在
+* 输    入         : 无
+* 输    出         : 1:未检测到DS18B20的存在，0:存在
+*******************************************************************************/
+u8 DS18B20_Check(void) 	   
 {   
 	u8 retry=0;
-	DQININT();	//SET PG11 INPUT	 
+	DS18B20_IO_IN();//SET PG11 INPUT	 
     while (DS18B20_DQ_IN&&retry<200)
 	{
 		retry++;
@@ -55,135 +75,134 @@ u8 ds18b20_Check(void)
 }
 
 /*******************************************************************************
-* 函 数 名         : DQININT
-* 函数功能		   : 输入配置	   
+* 函 数 名         : DS18B20_Read_Bit
+* 函数功能		   : 从DS18B20读取一个位
 * 输    入         : 无
-* 输    出         : 无
+* 输    出         : 1/0
 *******************************************************************************/
-void DQININT()	 //输入配置
+u8 DS18B20_Read_Bit(void) 			 // read one bit
 {
-	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_InitStructure.GPIO_Pin=dq;
-	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_IN_FLOATING;
-	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
-	GPIO_Init(GPIO_ds18b20,&GPIO_InitStructure);	
+	u8 data;
+	DS18B20_IO_OUT();//SET PG11 OUTPUT
+	DS18B20_DQ_OUT=0; 
+	delay_us(2);
+	DS18B20_DQ_OUT=1; 
+	DS18B20_IO_IN();//SET PG11 INPUT
+	delay_us(12);
+	if(DS18B20_DQ_IN)data=1;
+	else data=0;	 
+	delay_us(50);           
+	return data;
 }
 
 /*******************************************************************************
-* 函 数 名         : DQOUTINT
-* 函数功能		   : 输出配置	   
+* 函 数 名         : DS18B20_Read_Byte
+* 函数功能		   : 从DS18B20读取一个字节
+* 输    入         : 无
+* 输    出         : 一个字节数据
+*******************************************************************************/
+//
+//返回值：读到的数据
+u8 DS18B20_Read_Byte(void)    // read one byte
+{        
+    u8 i,j,dat;
+    dat=0;
+	for (i=1;i<=8;i++) 
+	{
+        j=DS18B20_Read_Bit();
+        dat=(j<<7)|(dat>>1);
+    }						    
+    return dat;
+}
+
+/*******************************************************************************
+* 函 数 名         : DS18B20_Write_Byte
+* 函数功能		   : 写一个字节到DS18B20
+* 输    入         : dat：要写入的字节
+* 输    出         : 无
+*******************************************************************************/
+void DS18B20_Write_Byte(u8 dat)     
+{             
+	u8 j;
+    u8 testb;
+	DS18B20_IO_OUT();//SET PG11 OUTPUT;
+    for (j=1;j<=8;j++) 
+	{
+        testb=dat&0x01;
+        dat=dat>>1;
+        if (testb) 
+        {
+            DS18B20_DQ_OUT=0;// Write 1
+            delay_us(2);                            
+            DS18B20_DQ_OUT=1;
+            delay_us(60);             
+        }
+        else 
+        {
+            DS18B20_DQ_OUT=0;// Write 0
+            delay_us(60);             
+            DS18B20_DQ_OUT=1;
+            delay_us(2);                          
+        }
+    }
+}
+
+/*******************************************************************************
+* 函 数 名         : DS18B20_Start
+* 函数功能		   : 开始温度转换
 * 输    入         : 无
 * 输    出         : 无
 *******************************************************************************/
-void DQOUTINT()	 //输出配置
+void DS18B20_Start(void)// ds1820 start convert
+{   						               
+    DS18B20_Reset();	   
+	DS18B20_Check();	 
+    DS18B20_Write_Byte(0xcc);// skip rom
+    DS18B20_Write_Byte(0x44);// convert
+} 
+
+/*******************************************************************************
+* 函 数 名         : DS18B20_Init
+* 函数功能		   : 初始化DS18B20的IO口 DQ 同时检测DS的存在
+* 输    入         : 无
+* 输    出         : 1:不存在，0:存在
+*******************************************************************************/   	 
+u8 DS18B20_Init(void)
 {
-	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_InitStructure.GPIO_Pin=dq;
+	GPIO_InitTypeDef  GPIO_InitStructure;
+
+	RCC_APB2PeriphClockCmd(DS18B20_PORT_RCC,ENABLE);
+
+	GPIO_InitStructure.GPIO_Pin=DS18B20_PIN;
+	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
-	GPIO_Init(GPIO_ds18b20,&GPIO_InitStructure);	
-}
+	GPIO_Init(DS18B20_PORT,&GPIO_InitStructure);
+ 
+ 	DS18B20_Reset();
+	return DS18B20_Check();
+}  
 
 /*******************************************************************************
-* 函 数 名         : ds18b20init
-* 函数功能		   : DS18B20初始化时序	   
+* 函 数 名         : DS18B20_GetTemperture
+* 函数功能		   : 从ds18b20得到温度值
 * 输    入         : 无
-* 输    出         : 无
-*******************************************************************************/
-void ds18b20init()
+* 输    出         : 温度数据
+*******************************************************************************/ 
+float DS18B20_GetTemperture(void)
 {
-	DQOUTINT();//输出
-	ds18b20_dq_L;
-	delay_us(480);//延时480微妙	
-	ds18b20_dq_H;
-	delay_us(480);//延时480微妙
-}
-
-/*******************************************************************************
-* 函 数 名         : ds18b20wr
-* 函数功能		   : DS18B20写数据时序	   
-* 输    入         : dat
-* 输    出         : 无
-*******************************************************************************/
-void ds18b20wr(u8 dat)
-{
-	u8 i=0;
-	DQOUTINT();//输出
-
-	for(i=0;i<8;i++)
-	{
-		ds18b20_dq_L;	 //拉低
-		delay_us(15);//延时15微妙
-		
-		if((dat&0x01)==1)
-		{
-			ds18b20_dq_H;
-		}
-		else
-		{
-			ds18b20_dq_L;
-		}
-		delay_us(60);//延时60微妙
-		ds18b20_dq_H;
-		
-		dat>>=1;//准备下一位数据的发送	
-	}
-}
-
-/*******************************************************************************
-* 函 数 名         : DS18b20rd
-* 函数功能		   : DS18B20读数据时序	   
-* 输    入         : 无
-* 输    出         : value
-*******************************************************************************/
-u8 DS18b20rd()
-{
-	u8 i=0,value=0;
-
-	for(i=0;i<8;i++)
-	{
-		value>>=1;
-		DQOUTINT();//输出
-		ds18b20_dq_L;	 //拉低
-		delay_us(4);//延时4微妙
-		ds18b20_dq_H;
-		delay_us(10);//延时10微妙
-		DQININT();	 //输入配置
-
-		if(GPIO_ReadInputDataBit(GPIO_ds18b20,dq)==1)
-		{
-		   value|=0x80;//读数据 从低位开始
-		}
-
-		delay_us(45);//延时45微妙
-	}
-
-	return value;	
-}
-
-/*******************************************************************************
-* 函 数 名         : readtemp
-* 函数功能		   : DS18B2温度寄存器配置，温度读取	   
-* 输    入         : 无
-* 输    出         : value
-*******************************************************************************/
-double readtemp()			  //读取温度内需要复位的
-{
-	u16 temp;
+    u16 temp;
 	u8 a,b;
-	double value;
-	ds18b20init();		//初始化
-	ds18b20wr(0xcc);   //发送忽略ROM指令
-	ds18b20wr(0x44);   //发送温度转换指令
-	delay_ms(10);
-	ds18b20init();	   //初始化
-	ds18b20wr(0xcc);   //发送忽略ROM指令
-	ds18b20wr(0xbe);   //发读暂存器指令
-	a=DS18b20rd();	 //温度的低八位
-	b=DS18b20rd();	 //温度的高八位
+	float value;
+    DS18B20_Start();                    // ds1820 start convert
+    DS18B20_Reset();
+    DS18B20_Check();	 
+    DS18B20_Write_Byte(0xcc);// skip rom
+    DS18B20_Write_Byte(0xbe);// convert	    
+    a=DS18B20_Read_Byte(); // LSB   
+    b=DS18B20_Read_Byte(); // MSB   
 	temp=b;
 	temp=(temp<<8)+a;
-	if((temp&0xf800)==0xf800)
+    if((temp&0xf800)==0xf800)
 	{
 		temp=(~temp)+1;
 		value=temp*(-0.0625);
@@ -192,6 +211,9 @@ double readtemp()			  //读取温度内需要复位的
 	{
 		value=temp*0.0625;	
 	}
-	return value;
+	return value;    
 }
+
+
+
 

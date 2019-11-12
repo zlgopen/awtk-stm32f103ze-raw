@@ -1,10 +1,13 @@
 #ifndef _rs485_H
 #define _rs485_H
 
-#include "sys.h"
-#include "delay.h"
+#include "system.h"
 
-void rs485_init(u32 baund);   //485初始化
+
+//模式控制
+#define RS485_TX_EN		PGout(3)	//485模式控制.0,接收;1,发送.
+														 
+void RS485_Init(u32 bound);
 
 
 #endif

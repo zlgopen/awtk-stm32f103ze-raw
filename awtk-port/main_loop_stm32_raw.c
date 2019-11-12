@@ -19,18 +19,13 @@
  *
  */
 
-#include "button.h"
-#include "delay.h"
-#include "flash.h"
-#include "gui.h"
+#include "key.h"
 #include "led.h"
 #include "rtc.h"
-#include "sys.h"
-#include "tim.h"
 #include "touch.h"
 #include "usart.h"
 #include "stdlib.h"
-#include "lcd_driver.h"
+#include "tftlcd.h"
 
 #include "base/idle.h"
 #include "base/timer.h"
@@ -49,15 +44,46 @@ static lcd_t* platform_create_lcd(wh_t w, wh_t h) {
   return lcd_reg_create(w, h);
 }
 
+void dispatch_input_events(void) {
+  int key = KEY_Scan(0);
+
+  switch (key) {
+    case KEY_UP: {
+      key = TK_KEY_UP;
+      break;
+    }
+    case KEY_DOWN: {
+      key = TK_KEY_DOWN;
+      break;
+    }
+    case KEY_LEFT: {
+      key = TK_KEY_LEFT;
+      break;
+    }
+    case KEY_RIGHT: {
+      key = TK_KEY_RIGHT;
+      break;
+    }
+    default: { key = 0; }
+  }
+
+  if (key) {
+    main_loop_post_key_event(main_loop(), TRUE, key);
+  } else {
+    main_loop_post_key_event(main_loop(), FALSE, key);
+  }
+
+  if (TOUCH_Scan() == 0) {
+    main_loop_post_pointer_event(main_loop(), TRUE, TouchData.lcdx, TouchData.lcdy);
+  } else {
+    main_loop_post_pointer_event(main_loop(), FALSE, TouchData.lcdx, TouchData.lcdy);
+  }
+}
+
 void TIM3_IRQHandler(void) {
   if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET) {
+    dispatch_input_events();
     TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
-
-    if (TOUCH_Scan() == 0) {
-      main_loop_post_pointer_event(main_loop(), TRUE, TouchData.lcdx, TouchData.lcdy);
-    } else {
-      main_loop_post_pointer_event(main_loop(), FALSE, TouchData.lcdx, TouchData.lcdy);
-    }
   }
 }
 

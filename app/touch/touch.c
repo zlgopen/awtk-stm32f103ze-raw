@@ -1,45 +1,77 @@
 #include "touch.h"
+#include "24cxx.h"
+#include "SysTick.h"
+#include "tftlcd.h"
 #include "spi.h"
-#include "flash.h"
-#include "gui.h"
+
 
 #define TOUCH_AdjDelay500ms() delay_ms(500)
 
 TouchTypeDef TouchData;         //定义用来存储读取到的数据
 static PosTypeDef TouchAdj;     //定义一阵数据用来保存校正因数
 
-/****************************************************************************
-* Function Name  : TOUCH_ReadData
-* Description    : 采样物理坐标值
-* Input          : cmd：选择要读取是X轴还是Y轴的命令
-* Output         : None
-* Return         : 读取到的物理坐标值
-****************************************************************************/
+
+
+void TOUCH_Init(void)
+{
+	GPIO_InitTypeDef GPIO_InitStructure;
+
+    /* SPI的IO口和SPI外设打开时钟 */
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+
+    /* TOUCH-CS的IO口设置 */
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    /* TOUCH-PEN的IO口设置 */
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_7;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    SPI1_Init();
+
+    /* 使用EEPROM来存储校正参数，所以注意之前要初始化 */
+    /* 检测是否有校正参数 */
+    AT24CXX_Init();		//初始化24CXX
+	AT24CXX_Read(TOUCH_ADJ_ADDR,&TouchAdj.posState,sizeof(TouchAdj));
+	if(TouchAdj.posState != TOUCH_ADJ_OK)
+    {
+        TOUCH_Adjust(); //校正   
+    }
+}
+
+
 
 uint16_t TOUCH_ReadData(uint8_t cmd)
 {
     uint8_t i, j;
     uint16_t readValue[TOUCH_READ_TIMES], value;
     uint32_t totalValue;
-
-    /* SPI的速度不宜过快 */
-    SPI2_SetSpeed(SPI_BaudRatePrescaler_16);
+	
+	/* SPI的速度不宜过快 */
+    SPI1_SetSpeed(SPI_BaudRatePrescaler_16);
+	
     /* 读取TOUCH_READ_TIMES次触摸值 */
     for(i=0; i<TOUCH_READ_TIMES; i++)
     {   /* 打开片选 */
-        TOUCH_CS_CLR;
+        TCS=0;
         /* 在差分模式下，XPT2046转换需要24个时钟，8个时钟输入命令，之后1个时钟去除 */
         /* 忙信号，接着输出12位转换结果，剩下3个时钟是忽略位 */    
-        SPI1_WriteReadData(cmd); // 发送命令，选择X轴或者Y轴 
+        SPI1_ReadWriteByte(cmd); // 发送命令，选择X轴或者Y轴 
         
         /* 读取数据 */
-        readValue[i] = SPI1_WriteReadData(0xFF);
+        readValue[i] = SPI1_ReadWriteByte(0xFF);
         readValue[i] <<= 8;
-        readValue[i] |= SPI1_WriteReadData(0xFF);
+        readValue[i] |= SPI1_ReadWriteByte(0xFF);
         
         /* 将数据处理，读取到的AD值的只有12位，最低三位无用 */
         readValue[i] >>= 3;
-        TOUCH_CS_SET;
+        
+        TCS=1;
     }
 
     /* 滤波处理 */
@@ -70,15 +102,6 @@ uint16_t TOUCH_ReadData(uint8_t cmd)
     return value;
 }
 
-/****************************************************************************
-* Function Name  : TOUCH_ReadXY
-* Description    : 读取触摸屏的X轴Y轴的物理坐标值
-* Input          : *xValue：保存读取到X轴物理坐标值的地址
-*                * *yValue：保存读取到Y轴物理坐标值的地址
-* Output         : None
-* Return         : 0：读取成功；0xFF：读取失败
-****************************************************************************/
-
 uint8_t TOUCH_ReadXY(uint16_t *xValue, uint16_t *yValue)
 {   
     uint16_t xValue1, yValue1, xValue2, yValue2;
@@ -108,7 +131,7 @@ uint8_t TOUCH_ReadXY(uint16_t *xValue, uint16_t *yValue)
     }
 
     /* 判断采样差值是否在可控范围内 */
-	if((*xValue > TOUCH_MAX+150) || (*yValue > TOUCH_MAX+150))  
+	if((*xValue > TOUCH_MAX+0) || (*yValue > TOUCH_MAX+0))  
 	{
 		return 0xFF;
 	}
@@ -118,8 +141,8 @@ uint8_t TOUCH_ReadXY(uint16_t *xValue, uint16_t *yValue)
     *yValue = (yValue1 + yValue2) / 2;
 
     /* 判断得到的值，是否在取值范围之内 */
-    if((*xValue > TOUCH_X_MAX+150) || (*xValue < TOUCH_X_MIN) 
-       || (*yValue > TOUCH_Y_MAX+150) || (*yValue < TOUCH_Y_MIN))
+    if((*xValue > TOUCH_X_MAX+0) || (*xValue < TOUCH_X_MIN) 
+       || (*yValue > TOUCH_Y_MAX+0) || (*yValue < TOUCH_Y_MIN))
     {                   
         return 0xFF;
     }
@@ -127,25 +150,14 @@ uint8_t TOUCH_ReadXY(uint16_t *xValue, uint16_t *yValue)
     return 0; 
 }
 
-/****************************************************************************
-* Function Name  : TOUCH_ReadAdjust
-* Description    : 用校正的时候读取校正点的物理坐标值
-* Input          : x：校正点X坐标
-*                * y：校正点Y坐标
-*                * *xValue：保存读取到X轴物理坐标值的地址
-*                * *yValue：保存读取到Y轴物理坐标值的地址
-* Output         : None
-* Return         : 0：读取成功；0xFF:读取失败
-****************************************************************************/
-
 uint8_t TOUCH_ReadAdjust(uint16_t x, uint16_t y, uint16_t *xValue, uint16_t *yValue)
 {
     uint8_t i;
     uint32_t timeCont;
 
     /* 读取校正点的坐标 */
-    TFT_ClearScreen(BLACK);
-    GUI_DrowSign(x, y, RED);
+    LCD_Clear(BACK_COLOR);
+    LCD_DrowSign(x, y, RED);
     i = 0;
     while(1)
     {
@@ -154,7 +166,7 @@ uint8_t TOUCH_ReadAdjust(uint16_t x, uint16_t y, uint16_t *xValue, uint16_t *yVa
             i++;
             if(i > 10)         //延时一下，以读取最佳值
             {
-                GUI_DrowSign(x, y, BLACK);
+                LCD_DrowSign(x, y, BACK_COLOR);
                 return 0;
             }
                
@@ -163,19 +175,11 @@ uint8_t TOUCH_ReadAdjust(uint16_t x, uint16_t y, uint16_t *xValue, uint16_t *yVa
         /* 超时退出 */
         if(timeCont > 0xFFFFFFFE)
         {   
-                GUI_DrowSign(x, y, BLACK); 
+                LCD_DrowSign(x, y, BACK_COLOR); 
                 return 0xFF;
         } 
     }       
 }
-
-/****************************************************************************
-* Function Name  : TOUCH_Adjust
-* Description    : 检测屏幕是否校正，没有的话进行校正，将校正值放置到FLASH中
-* Input          : None
-* Output         : None
-* Return         : None
-****************************************************************************/
 
 void TOUCH_Adjust(void)
 {
@@ -229,61 +233,15 @@ void TOUCH_Adjust(void)
     TouchAdj.yFactor = yFactor ;
     
     TouchAdj.posState = TOUCH_ADJ_OK;
-    FLASH_WriteData(&TouchAdj.posState, TOUCH_ADJ_ADDR, sizeof(TouchAdj));            
+    AT24CXX_Write(TOUCH_ADJ_ADDR, &TouchAdj.posState, sizeof(TouchAdj));            
 }
 
-/****************************************************************************
-* Function Name  : TOUCH_Init
-* Description    : 初始化触摸屏
-* Input          : None
-* Output         : None
-* Return         : None
-****************************************************************************/
-
-void TOUCH_Init(void)
-{
-    GPIO_InitTypeDef GPIO_InitStructure;
-
-    /* SPI的IO口和SPI外设打开时钟 */
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
-
-    /* TOUCH-CS的IO口设置 */
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-    GPIO_Init(GPIOD, &GPIO_InitStructure);
-
-    /* TOUCH-PEN的IO口设置 */
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_7;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-
-    GPIO_Init(GPIOD, &GPIO_InitStructure);
-
-    SPI1_Config();
-
-    /* 要使用FLASH来存储校正参数，所以注意之前要初始化 */
-    /* 检测是否有校正参数 */
-    FLASH_ReadData(&TouchAdj.posState, TOUCH_ADJ_ADDR, sizeof(TouchAdj));
-    if(TouchAdj.posState != TOUCH_ADJ_OK)
-    {
-        TOUCH_Adjust(); //校正   
-    }
-}
-
-/****************************************************************************
-* Function Name  : TOUCH_Scan
-* Description    : 扫描是否有触摸按下
-* Input          : None
-* Output         : TouchData：读取到的物理坐标值和对应的彩屏坐标值
-* Return         : 0：读取成功；0xFF：没有触摸
-****************************************************************************/
 
 uint8_t TOUCH_Scan(void)
 {
     
- //   if(TOUCH_PEN == 0)   //查看是否有触摸
-  //  {
+//    if(PEN == 0)   //查看是否有触摸
+    {
         if(TOUCH_ReadXY(&TouchData.x, &TouchData.y)) //没有触摸
         {
             return 0xFF;    
@@ -293,16 +251,22 @@ uint8_t TOUCH_Scan(void)
         TouchData.lcdy = TouchData.y * TouchAdj.yFactor + TouchAdj.yOffset;
         
         /* 查看彩屏坐标值是否超过彩屏大小 */
-        if(TouchData.lcdx > TFT_XMAX)
+        if(TouchData.lcdx > tftlcd_data.width)
         {
-            TouchData.lcdx = TFT_XMAX;
+            TouchData.lcdx = tftlcd_data.width;
         }
-        if(TouchData.lcdy > TFT_YMAX)
+        if(TouchData.lcdy > tftlcd_data.height)
         {
-            TouchData.lcdy = TFT_YMAX;
+            TouchData.lcdy = tftlcd_data.height;
         }
         return 0; 
-  //  }
-  //  return 0xFF;       
+    }
+ //   return 0xFF;       
 }
+
+
+
+
+
+
 

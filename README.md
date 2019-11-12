@@ -1,6 +1,7 @@
 # AWTK针对STM32f103ze的移植。
 
-[AWTK](https://github.com/zlgopen/awtk)是为嵌入式系统开发的GUI引擎库。
+* [AWTK](https://github.com/zlgopen/awtk) 全称 Toolkit AnyWhere，是 [ZLG](http://www.zlg.cn/) 开发的开源 GUI 引擎，旨在为嵌入式系统、WEB、各种小程序、手机和 PC 打造的通用 GUI 引擎，为用户提供一个功能强大、高效可靠、简单易用、可轻松做出炫酷效果的 GUI 引擎。
+
 
 [awtk-stm32f103ze-raw](https://github.com/zlgopen/awtk-stm32f103ze-raw)是AWTK在STM32f103ze上的移植。
 
@@ -16,5 +17,8 @@ cd awtk-stm32f103ze-raw
 git clone https://github.com/zlgopen/awtk.git
 ```
 
-2. 用keil打开user/awtk.uvproj
+2. 用keil打开awtk.uvproj
 
+## 文档
+
+* [AWTK 在 STM32F103 裸系统上的移植笔记](https://github.com/zlgopen/awtk/blob/master/docs/porting_to_stm32f103ze.md)

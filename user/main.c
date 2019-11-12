@@ -1,32 +1,30 @@
-#include "button.h"
-#include "delay.h"
-#include "flash.h"
-#include "gui.h"
+#include "system.h"
+#include "SysTick.h"
 #include "led.h"
+#include "usart.h"
+#include "tftlcd.h"
+#include "time.h"
+#include "key.h"
+#include "touch.h"
 #include "rtc.h"
 #include "stdlib.h"
-#include "sys.h"
-#include "tim.h"
-#include "touch.h"
-#include "usart.h"
-#include "lcd_driver.h"
 
-extern void systick_init(void);
 extern int gui_app_start(int lcd_w, int lcd_h);
 
-int main()
-{	
-  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
-  systick_init();
-  led_init();
-  button_init();
-  TFT_Init();
-  TFT_ClearScreen(BLACK);
-  FLASH_Init();
-  TOUCH_Init();
+void hardware_prepare(void) {
+	SysTick_Init();
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);  
+	LED_Init();
+	USART1_Init(9600);
+	TFTLCD_Init();			
+	KEY_Init();
+	TOUCH_Init();
+	TIM3_Init(50,7199);
+	RTC_Init();
+}
 
-  TIM3_Init(50, 7199);
-  rtc_init();
-
-	return gui_app_start(320, 480);
+int main() {
+	hardware_prepare();
+	
+	return gui_app_start(tftlcd_data.width, tftlcd_data.height);
 }

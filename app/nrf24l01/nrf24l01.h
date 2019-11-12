@@ -1,8 +1,8 @@
 #ifndef _nrf24l01_H
 #define _nrf24l01_H
 
-#include "sys.h"
-#include "delay.h"
+#include "system.h"
+#include "SysTick.h"
 
 //NRF24L01¼Ä´æÆ÷²Ù×÷ÃüÁî
 #define NRF_READ_REG    0x00  //¶ÁÅäÖÃ¼Ä´æÆ÷,µÍ5Î»Îª¼Ä´æÆ÷µØÖ·
