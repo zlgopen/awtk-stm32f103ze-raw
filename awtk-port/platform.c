@@ -23,8 +23,13 @@
 #include "base/timer.h"
 
 ret_t platform_prepare(void) {
-	static uint32_t s_heam_mem[2048 * 3];
-  tk_mem_init(s_heam_mem, sizeof(s_heam_mem));
+  static bool_t inited = FALSE;
+  static uint32_t s_heam_mem[7600];
+
+  if (!inited) {
+    inited = TRUE;
+    tk_mem_init(s_heam_mem, sizeof(s_heam_mem));
+  }
 
   return RET_OK;
 }
