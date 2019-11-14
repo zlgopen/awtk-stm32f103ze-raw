@@ -20,9 +20,8 @@
  */
 
 #include "tftlcd.h"
-
-#include "lcd/lcd_mem_fragment.h"
 #include "tkc/mem.h"
+#include "lcd/lcd_mem_fragment.h"
 
 typedef uint16_t pixel_t;
 
