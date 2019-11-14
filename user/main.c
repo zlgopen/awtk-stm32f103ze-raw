@@ -10,6 +10,7 @@
 #include "stdlib.h"
 
 extern int gui_app_start(int lcd_w, int lcd_h);
+extern void systick_enable_int(void);
 
 void hardware_prepare(void) {
 	SysTick_Init();
@@ -25,6 +26,7 @@ void hardware_prepare(void) {
 
 int main() {
 	hardware_prepare();
+	systick_enable_int();
 	
 	return gui_app_start(tftlcd_data.width, tftlcd_data.height);
 }
