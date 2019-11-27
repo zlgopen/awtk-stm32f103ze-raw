@@ -311,7 +311,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -1594,6 +1594,11 @@
               <FileName>soft_g2d.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\awtk\src\blend\soft_g2d.c</FilePath>
+            </File>
+            <File>
+              <FileName>log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\tkc\log.c</FilePath>
             </File>
           </Files>
         </Group>
