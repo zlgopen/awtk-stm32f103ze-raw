@@ -1625,6 +1625,11 @@
               <FileType>1</FileType>
               <FilePath>.\awtk\src\blend\rotate_image_rgb888.c</FilePath>
             </File>
+            <File>
+              <FileName>clip_view.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\widgets\clip_view.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
