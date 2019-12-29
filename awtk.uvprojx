@@ -1630,6 +1630,11 @@
               <FileType>1</FileType>
               <FilePath>.\awtk\src\widgets\clip_view.c</FilePath>
             </File>
+            <File>
+              <FileName>asset_info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\tkc\asset_info.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
