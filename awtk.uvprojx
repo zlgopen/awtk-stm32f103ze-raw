@@ -1635,6 +1635,11 @@
               <FileType>1</FileType>
               <FilePath>.\awtk\src\tkc\asset_info.c</FilePath>
             </File>
+            <File>
+              <FileName>date_time_format.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\base\date_time_format.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
