@@ -1645,6 +1645,46 @@
               <FileType>1</FileType>
               <FilePath>.\awtk\src\base\asset_loader.c</FilePath>
             </File>
+            <File>
+              <FileName>blend_image_bgr565_rgb565.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\blend\blend_image_bgr565_rgb565.c</FilePath>
+            </File>
+            <File>
+              <FileName>blend_image_bgr888_rgb565.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\blend\blend_image_bgr888_rgb565.c</FilePath>
+            </File>
+            <File>
+              <FileName>blend_image_bgra8888_rgb565.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\blend\blend_image_bgra8888_rgb565.c</FilePath>
+            </File>
+            <File>
+              <FileName>blend_image_rgb565_rgb565.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\blend\blend_image_rgb565_rgb565.c</FilePath>
+            </File>
+            <File>
+              <FileName>blend_image_rgb888_rgb565.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\blend\blend_image_rgb888_rgb565.c</FilePath>
+            </File>
+            <File>
+              <FileName>blend_image_rgba8888_rgb565.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\blend\blend_image_rgba8888_rgb565.c</FilePath>
+            </File>
+            <File>
+              <FileName>blend_image_bgr888_bgr888.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\blend\blend_image_bgr888_bgr888.c</FilePath>
+            </File>
+            <File>
+              <FileName>blend_image_rgb888_rgb888.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\blend\blend_image_rgb888_rgb888.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
