@@ -22,3 +22,20 @@ git clone https://github.com/zlgopen/awtk.git
 ## 文档
 
 * [AWTK 在 STM32F103 裸系统上的移植笔记](https://github.com/zlgopen/awtk/blob/master/docs/porting_to_stm32f103ze.md)
+
+* 老版本硬件和新版本硬件的LCD控制器
+
+请根据自己的板子，修改tftlcd.h，定义LCD对应的宏：
+
+新版本(缺省)
+
+```c
+#define TFTLCD_R61509VN 
+```
+
+旧版本
+
+```c
+#define TFTLCD_HX8357D 
+```
+
