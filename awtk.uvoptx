@@ -901,8 +901,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\awtk\src\tkc\expr_eval.c</PathWithFileName>
-      <FilenameWithoutPath>expr_eval.c</FilenameWithoutPath>
+      <PathWithFileName>.\awtk\src\tkc\fscript.c</PathWithFileName>
+      <FilenameWithoutPath>fscript.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

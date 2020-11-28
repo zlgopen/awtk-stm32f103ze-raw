@@ -656,9 +656,9 @@
               <FilePath>.\awtk\src\tkc\event_source_timer.c</FilePath>
             </File>
             <File>
-              <FileName>expr_eval.c</FileName>
+              <FileName>fscript.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\expr_eval.c</FilePath>
+              <FilePath>.\awtk\src\tkc\fscript.c</FilePath>
             </File>
             <File>
               <FileName>fs.c</FileName>
