@@ -274,7 +274,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x80000</Size>
+                <Size>0x800000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -1739,6 +1739,11 @@
               <FileName>sys_tick_handler.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\awtk\src\platforms\raw\sys_tick_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>semaphore_null.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\platforms\raw\semaphore_null.c</FilePath>
             </File>
           </Files>
         </Group>
