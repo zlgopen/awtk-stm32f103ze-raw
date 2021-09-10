@@ -169,6 +169,13 @@
  *
  */
  #define WITHOUT_EXT_WIDGETS 1
+ 
+ /**
+ * 对于低端平台，如果不使用 fscript 模块，请定义本宏。
+ *
+ * 
+ */
+ #define WITHOUT_FSCRIPT 1
 
 /**
  * 对于低端平台，如果内存不足以提供完整的FrameBuffer，请定义本宏启用局部FrameBuffer，可大幅度提高渲染性能。(单位是像素个数)
