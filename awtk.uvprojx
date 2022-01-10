@@ -1685,6 +1685,16 @@
               <FileType>1</FileType>
               <FilePath>.\awtk\src\blend\blend_image_rgb888_rgb888.c</FilePath>
             </File>
+            <File>
+              <FileName>object_locker.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\tkc\object_locker.c</FilePath>
+            </File>
+            <File>
+              <FileName>mutex_nest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\awtk\src\tkc\mutex_nest.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
