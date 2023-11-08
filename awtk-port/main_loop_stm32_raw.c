@@ -45,11 +45,12 @@ static lcd_t *platform_create_lcd(wh_t w, wh_t h) {
 }
 
 void dispatch_input_events(void) {
+  static int prev_key = 0;
   int key = KEY_Scan(0);
 
   switch (key) {
-  case KEY_UP: {
-    key = TK_KEY_UP;
+  case KEY_RIGHT: {
+    key = TK_KEY_RIGHT;
     break;
   }
   case KEY_DOWN: {
@@ -60,18 +61,20 @@ void dispatch_input_events(void) {
     key = TK_KEY_RETURN;
     break;
   }
-  case KEY_RIGHT: {
-    key = TK_KEY_BACK;
+  case KEY_UP: {
+    key = TK_KEY_UP;
     break;
   }
   default: { key = 0; }
   }
 
-  if (key) {
+  if (key != prev_key) {
+    main_loop_post_key_event(main_loop(), FALSE, prev_key);
     main_loop_post_key_event(main_loop(), TRUE, key);
   } else {
-    main_loop_post_key_event(main_loop(), FALSE, key);
+    main_loop_post_key_event(main_loop(), TRUE, key);
   }
+  prev_key = key;
 
   if (TOUCH_Scan() == 0) {
     main_loop_post_pointer_event(main_loop(), TRUE, TouchData.lcdx,
