@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD,HAS_AWTK_CONFIG</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\pwm;.\APP\iwdg;.\APP\wwdg;.\APP\input;.\APP\touch_key;.\APP\wkup;.\APP\adc;.\APP\adc_temp;.\APP\dac;.\APP\pwm_dac;.\APP\dma;.\APP\rtc;.\APP\24Cxx;.\APP\iic;.\APP\ds18b20;.\APP\hwjs;.\APP\rs485;.\APP\can;.\APP\tftlcd;.\APP\spi;.\APP\nrf24l01;.\APP\dht11;.\APP\oled;.\APP\RC522;.\APP\Tetris;.\APP\ball;.\APP\touch;.\APP\snake;.\awtk\3rd;.\awtk\src;.\awtk-port</IncludePath>
+              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\APP\led;.\Public;.\APP\beep;.\APP\smg;.\APP\key;.\APP\exti;.\APP\time;.\APP\pwm;.\APP\iwdg;.\APP\wwdg;.\APP\input;.\APP\touch_key;.\APP\wkup;.\APP\adc;.\APP\adc_temp;.\APP\dac;.\APP\pwm_dac;.\APP\dma;.\APP\rtc;.\APP\24Cxx;.\APP\iic;.\APP\ds18b20;.\APP\hwjs;.\APP\rs485;.\APP\can;.\APP\tftlcd;.\APP\spi;.\APP\nrf24l01;.\APP\dht11;.\APP\oled;.\APP\RC522;.\APP\Tetris;.\APP\ball;.\APP\touch;.\APP\snake;..\awtk\3rd;..\awtk\src;.\awtk-port</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -384,9 +384,9 @@
           <GroupName>User</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>real_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\main.c</FilePath>
+              <FilePath>.\User\real_main.c</FilePath>
             </File>
             <File>
               <FileName>stm32f10x_it.c</FileName>
@@ -581,1117 +581,1117 @@
             <File>
               <FileName>buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\buffer.c</FilePath>
+              <FilePath>..\awtk\src\tkc\buffer.c</FilePath>
             </File>
             <File>
               <FileName>color.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\color.c</FilePath>
+              <FilePath>..\awtk\src\tkc\color.c</FilePath>
             </File>
             <File>
               <FileName>color_parser.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\color_parser.c</FilePath>
+              <FilePath>..\awtk\src\tkc\color_parser.c</FilePath>
             </File>
             <File>
               <FileName>compressor.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\compressor.c</FilePath>
+              <FilePath>..\awtk\src\tkc\compressor.c</FilePath>
             </File>
             <File>
               <FileName>crc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\crc.c</FilePath>
+              <FilePath>..\awtk\src\tkc\crc.c</FilePath>
             </File>
             <File>
               <FileName>darray.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\darray.c</FilePath>
+              <FilePath>..\awtk\src\tkc\darray.c</FilePath>
             </File>
             <File>
               <FileName>date_time.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\date_time.c</FilePath>
+              <FilePath>..\awtk\src\tkc\date_time.c</FilePath>
             </File>
             <File>
               <FileName>easing.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\easing.c</FilePath>
+              <FilePath>..\awtk\src\tkc\easing.c</FilePath>
             </File>
             <File>
               <FileName>emitter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\emitter.c</FilePath>
+              <FilePath>..\awtk\src\tkc\emitter.c</FilePath>
             </File>
             <File>
               <FileName>event.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\event.c</FilePath>
+              <FilePath>..\awtk\src\tkc\event.c</FilePath>
             </File>
             <File>
               <FileName>event_source.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\event_source.c</FilePath>
+              <FilePath>..\awtk\src\tkc\event_source.c</FilePath>
             </File>
             <File>
               <FileName>event_source_fd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\event_source_fd.c</FilePath>
+              <FilePath>..\awtk\src\tkc\event_source_fd.c</FilePath>
             </File>
             <File>
               <FileName>event_source_idle.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\event_source_idle.c</FilePath>
+              <FilePath>..\awtk\src\tkc\event_source_idle.c</FilePath>
             </File>
             <File>
               <FileName>event_source_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\event_source_manager.c</FilePath>
+              <FilePath>..\awtk\src\tkc\event_source_manager.c</FilePath>
             </File>
             <File>
               <FileName>event_source_manager_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\event_source_manager_default.c</FilePath>
+              <FilePath>..\awtk\src\tkc\event_source_manager_default.c</FilePath>
             </File>
             <File>
               <FileName>event_source_timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\event_source_timer.c</FilePath>
+              <FilePath>..\awtk\src\tkc\event_source_timer.c</FilePath>
             </File>
             <File>
               <FileName>fscript.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\fscript.c</FilePath>
+              <FilePath>..\awtk\src\tkc\fscript.c</FilePath>
             </File>
             <File>
               <FileName>fs.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\fs.c</FilePath>
+              <FilePath>..\awtk\src\tkc\fs.c</FilePath>
             </File>
             <File>
               <FileName>func_call_parser.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\func_call_parser.c</FilePath>
+              <FilePath>..\awtk\src\tkc\func_call_parser.c</FilePath>
             </File>
             <File>
               <FileName>idle_info.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\idle_info.c</FilePath>
+              <FilePath>..\awtk\src\tkc\idle_info.c</FilePath>
             </File>
             <File>
               <FileName>idle_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\idle_manager.c</FilePath>
+              <FilePath>..\awtk\src\tkc\idle_manager.c</FilePath>
             </File>
             <File>
               <FileName>int_str.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\int_str.c</FilePath>
+              <FilePath>..\awtk\src\tkc\int_str.c</FilePath>
             </File>
             <File>
               <FileName>iostream.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\iostream.c</FilePath>
+              <FilePath>..\awtk\src\tkc\iostream.c</FilePath>
             </File>
             <File>
               <FileName>istream.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\istream.c</FilePath>
+              <FilePath>..\awtk\src\tkc\istream.c</FilePath>
             </File>
             <File>
               <FileName>matrix.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\matrix.c</FilePath>
+              <FilePath>..\awtk\src\tkc\matrix.c</FilePath>
             </File>
             <File>
               <FileName>mem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\mem.c</FilePath>
+              <FilePath>..\awtk\src\tkc\mem.c</FilePath>
             </File>
             <File>
               <FileName>named_value.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\named_value.c</FilePath>
+              <FilePath>..\awtk\src\tkc\named_value.c</FilePath>
             </File>
             <File>
               <FileName>object.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\object.c</FilePath>
+              <FilePath>..\awtk\src\tkc\object.c</FilePath>
             </File>
             <File>
               <FileName>object_array.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\object_array.c</FilePath>
+              <FilePath>..\awtk\src\tkc\object_array.c</FilePath>
             </File>
             <File>
               <FileName>object_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\object_default.c</FilePath>
+              <FilePath>..\awtk\src\tkc\object_default.c</FilePath>
             </File>
             <File>
               <FileName>ostream.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\ostream.c</FilePath>
+              <FilePath>..\awtk\src\tkc\ostream.c</FilePath>
             </File>
             <File>
               <FileName>path.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\path.c</FilePath>
+              <FilePath>..\awtk\src\tkc\path.c</FilePath>
             </File>
             <File>
               <FileName>rect.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\rect.c</FilePath>
+              <FilePath>..\awtk\src\tkc\rect.c</FilePath>
             </File>
             <File>
               <FileName>ring_buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\ring_buffer.c</FilePath>
+              <FilePath>..\awtk\src\tkc\ring_buffer.c</FilePath>
             </File>
             <File>
               <FileName>rom_fs.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\rom_fs.c</FilePath>
+              <FilePath>..\awtk\src\tkc\rom_fs.c</FilePath>
             </File>
             <File>
               <FileName>slist.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\slist.c</FilePath>
+              <FilePath>..\awtk\src\tkc\slist.c</FilePath>
             </File>
             <File>
               <FileName>socket_pair.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\socket_pair.c</FilePath>
+              <FilePath>..\awtk\src\tkc\socket_pair.c</FilePath>
             </File>
             <File>
               <FileName>str.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\str.c</FilePath>
+              <FilePath>..\awtk\src\tkc\str.c</FilePath>
             </File>
             <File>
               <FileName>str_str.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\str_str.c</FilePath>
+              <FilePath>..\awtk\src\tkc\str_str.c</FilePath>
             </File>
             <File>
               <FileName>time_now.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\time_now.c</FilePath>
+              <FilePath>..\awtk\src\tkc\time_now.c</FilePath>
             </File>
             <File>
               <FileName>timer_info.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\timer_info.c</FilePath>
+              <FilePath>..\awtk\src\tkc\timer_info.c</FilePath>
             </File>
             <File>
               <FileName>timer_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\timer_manager.c</FilePath>
+              <FilePath>..\awtk\src\tkc\timer_manager.c</FilePath>
             </File>
             <File>
               <FileName>tokenizer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\tokenizer.c</FilePath>
+              <FilePath>..\awtk\src\tkc\tokenizer.c</FilePath>
             </File>
             <File>
               <FileName>utf8.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\utf8.c</FilePath>
+              <FilePath>..\awtk\src\tkc\utf8.c</FilePath>
             </File>
             <File>
               <FileName>utils.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\utils.c</FilePath>
+              <FilePath>..\awtk\src\tkc\utils.c</FilePath>
             </File>
             <File>
               <FileName>value.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\value.c</FilePath>
+              <FilePath>..\awtk\src\tkc\value.c</FilePath>
             </File>
             <File>
               <FileName>value_desc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\value_desc.c</FilePath>
+              <FilePath>..\awtk\src\tkc\value_desc.c</FilePath>
             </File>
             <File>
               <FileName>wstr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\wstr.c</FilePath>
+              <FilePath>..\awtk\src\tkc\wstr.c</FilePath>
             </File>
             <File>
               <FileName>assets_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\assets_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\assets_manager.c</FilePath>
             </File>
             <File>
               <FileName>bitmap.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\bitmap.c</FilePath>
+              <FilePath>..\awtk\src\base\bitmap.c</FilePath>
             </File>
             <File>
               <FileName>canvas.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\canvas.c</FilePath>
+              <FilePath>..\awtk\src\base\canvas.c</FilePath>
             </File>
             <File>
               <FileName>children_layouter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\children_layouter.c</FilePath>
+              <FilePath>..\awtk\src\base\children_layouter.c</FilePath>
             </File>
             <File>
               <FileName>children_layouter_factory.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\children_layouter_factory.c</FilePath>
+              <FilePath>..\awtk\src\base\children_layouter_factory.c</FilePath>
             </File>
             <File>
               <FileName>clip_board.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\clip_board.c</FilePath>
+              <FilePath>..\awtk\src\base\clip_board.c</FilePath>
             </File>
             <File>
               <FileName>dialog.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\dialog.c</FilePath>
+              <FilePath>..\awtk\src\base\dialog.c</FilePath>
             </File>
             <File>
               <FileName>dialog_highlighter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\dialog_highlighter.c</FilePath>
+              <FilePath>..\awtk\src\base\dialog_highlighter.c</FilePath>
             </File>
             <File>
               <FileName>dialog_highlighter_factory.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\dialog_highlighter_factory.c</FilePath>
+              <FilePath>..\awtk\src\base\dialog_highlighter_factory.c</FilePath>
             </File>
             <File>
               <FileName>enums.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\enums.c</FilePath>
+              <FilePath>..\awtk\src\base\enums.c</FilePath>
             </File>
             <File>
               <FileName>event_queue.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\event_queue.c</FilePath>
+              <FilePath>..\awtk\src\base\event_queue.c</FilePath>
             </File>
             <File>
               <FileName>events.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\events.c</FilePath>
+              <FilePath>..\awtk\src\base\events.c</FilePath>
             </File>
             <File>
               <FileName>font.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\font.c</FilePath>
+              <FilePath>..\awtk\src\base\font.c</FilePath>
             </File>
             <File>
               <FileName>font_loader.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\font_loader.c</FilePath>
+              <FilePath>..\awtk\src\base\font_loader.c</FilePath>
             </File>
             <File>
               <FileName>font_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\font_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\font_manager.c</FilePath>
             </File>
             <File>
               <FileName>glyph_cache.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\glyph_cache.c</FilePath>
+              <FilePath>..\awtk\src\base\glyph_cache.c</FilePath>
             </File>
             <File>
               <FileName>graphic_buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\graphic_buffer.c</FilePath>
+              <FilePath>..\awtk\src\base\graphic_buffer.c</FilePath>
             </File>
             <File>
               <FileName>hscrollable.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\hscrollable.c</FilePath>
+              <FilePath>..\awtk\src\base\hscrollable.c</FilePath>
             </File>
             <File>
               <FileName>idle.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\idle.c</FilePath>
+              <FilePath>..\awtk\src\base\idle.c</FilePath>
             </File>
             <File>
               <FileName>image_base.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\image_base.c</FilePath>
+              <FilePath>..\awtk\src\base\image_base.c</FilePath>
             </File>
             <File>
               <FileName>image_loader.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\image_loader.c</FilePath>
+              <FilePath>..\awtk\src\base\image_loader.c</FilePath>
             </File>
             <File>
               <FileName>image_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\image_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\image_manager.c</FilePath>
             </File>
             <File>
               <FileName>input_device_status.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\input_device_status.c</FilePath>
+              <FilePath>..\awtk\src\base\input_device_status.c</FilePath>
             </File>
             <File>
               <FileName>input_engine.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\input_engine.c</FilePath>
+              <FilePath>..\awtk\src\base\input_engine.c</FilePath>
             </File>
             <File>
               <FileName>input_method.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\input_method.c</FilePath>
+              <FilePath>..\awtk\src\base\input_method.c</FilePath>
             </File>
             <File>
               <FileName>layout.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\layout.c</FilePath>
+              <FilePath>..\awtk\src\base\layout.c</FilePath>
             </File>
             <File>
               <FileName>lcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\lcd.c</FilePath>
+              <FilePath>..\awtk\src\base\lcd.c</FilePath>
             </File>
             <File>
               <FileName>lcd_profile.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\lcd_profile.c</FilePath>
+              <FilePath>..\awtk\src\base\lcd_profile.c</FilePath>
             </File>
             <File>
               <FileName>line_break.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\line_break.c</FilePath>
+              <FilePath>..\awtk\src\base\line_break.c</FilePath>
             </File>
             <File>
               <FileName>locale_info.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\locale_info.c</FilePath>
+              <FilePath>..\awtk\src\base\locale_info.c</FilePath>
             </File>
             <File>
               <FileName>main_loop.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\main_loop.c</FilePath>
+              <FilePath>..\awtk\src\base\main_loop.c</FilePath>
             </File>
             <File>
               <FileName>native_window.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\native_window.c</FilePath>
+              <FilePath>..\awtk\src\base\native_window.c</FilePath>
             </File>
             <File>
               <FileName>self_layouter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\self_layouter.c</FilePath>
+              <FilePath>..\awtk\src\base\self_layouter.c</FilePath>
             </File>
             <File>
               <FileName>self_layouter_factory.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\self_layouter_factory.c</FilePath>
+              <FilePath>..\awtk\src\base\self_layouter_factory.c</FilePath>
             </File>
             <File>
               <FileName>shortcut.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\shortcut.c</FilePath>
+              <FilePath>..\awtk\src\base\shortcut.c</FilePath>
             </File>
             <File>
               <FileName>style.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\style.c</FilePath>
+              <FilePath>..\awtk\src\base\style.c</FilePath>
             </File>
             <File>
               <FileName>style_const.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\style_const.c</FilePath>
+              <FilePath>..\awtk\src\base\style_const.c</FilePath>
             </File>
             <File>
               <FileName>style_factory.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\style_factory.c</FilePath>
+              <FilePath>..\awtk\src\base\style_factory.c</FilePath>
             </File>
             <File>
               <FileName>style_mutable.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\style_mutable.c</FilePath>
+              <FilePath>..\awtk\src\base\style_mutable.c</FilePath>
             </File>
             <File>
               <FileName>suggest_words.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\suggest_words.c</FilePath>
+              <FilePath>..\awtk\src\base\suggest_words.c</FilePath>
             </File>
             <File>
               <FileName>system_info.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\system_info.c</FilePath>
+              <FilePath>..\awtk\src\base\system_info.c</FilePath>
             </File>
             <File>
               <FileName>text_edit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\text_edit.c</FilePath>
+              <FilePath>..\awtk\src\base\text_edit.c</FilePath>
             </File>
             <File>
               <FileName>theme.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\theme.c</FilePath>
+              <FilePath>..\awtk\src\base\theme.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\timer.c</FilePath>
+              <FilePath>..\awtk\src\base\timer.c</FilePath>
             </File>
             <File>
               <FileName>ui_builder.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\ui_builder.c</FilePath>
+              <FilePath>..\awtk\src\base\ui_builder.c</FilePath>
             </File>
             <File>
               <FileName>ui_feedback.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\ui_feedback.c</FilePath>
+              <FilePath>..\awtk\src\base\ui_feedback.c</FilePath>
             </File>
             <File>
               <FileName>ui_loader.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\ui_loader.c</FilePath>
+              <FilePath>..\awtk\src\base\ui_loader.c</FilePath>
             </File>
             <File>
               <FileName>velocity.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\velocity.c</FilePath>
+              <FilePath>..\awtk\src\base\velocity.c</FilePath>
             </File>
             <File>
               <FileName>vgcanvas.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\vgcanvas.c</FilePath>
+              <FilePath>..\awtk\src\base\vgcanvas.c</FilePath>
             </File>
             <File>
               <FileName>widget.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\widget.c</FilePath>
+              <FilePath>..\awtk\src\base\widget.c</FilePath>
             </File>
             <File>
               <FileName>widget_animator.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\widget_animator.c</FilePath>
+              <FilePath>..\awtk\src\base\widget_animator.c</FilePath>
             </File>
             <File>
               <FileName>widget_animator_factory_null.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\widget_animator_factory_null.c</FilePath>
+              <FilePath>..\awtk\src\base\widget_animator_factory_null.c</FilePath>
             </File>
             <File>
               <FileName>widget_animator_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\widget_animator_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\widget_animator_manager.c</FilePath>
             </File>
             <File>
               <FileName>widget_factory.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\widget_factory.c</FilePath>
+              <FilePath>..\awtk\src\base\widget_factory.c</FilePath>
             </File>
             <File>
               <FileName>widget_vtable.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\widget_vtable.c</FilePath>
+              <FilePath>..\awtk\src\base\widget_vtable.c</FilePath>
             </File>
             <File>
               <FileName>window.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\window.c</FilePath>
+              <FilePath>..\awtk\src\base\window.c</FilePath>
             </File>
             <File>
               <FileName>window_animator.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\window_animator.c</FilePath>
+              <FilePath>..\awtk\src\base\window_animator.c</FilePath>
             </File>
             <File>
               <FileName>window_animator_factory.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\window_animator_factory.c</FilePath>
+              <FilePath>..\awtk\src\base\window_animator_factory.c</FilePath>
             </File>
             <File>
               <FileName>window_base.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\window_base.c</FilePath>
+              <FilePath>..\awtk\src\base\window_base.c</FilePath>
             </File>
             <File>
               <FileName>window_manager.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\window_manager.c</FilePath>
+              <FilePath>..\awtk\src\base\window_manager.c</FilePath>
             </File>
             <File>
               <FileName>clip_board_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\clip_board\clip_board_default.c</FilePath>
+              <FilePath>..\awtk\src\clip_board\clip_board_default.c</FilePath>
             </File>
             <File>
               <FileName>font_loader_bitmap.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\font_loader\font_loader_bitmap.c</FilePath>
+              <FilePath>..\awtk\src\font_loader\font_loader_bitmap.c</FilePath>
             </File>
             <File>
               <FileName>graphic_buffer_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\graphic_buffer\graphic_buffer_default.c</FilePath>
+              <FilePath>..\awtk\src\graphic_buffer\graphic_buffer_default.c</FilePath>
             </File>
             <File>
               <FileName>input_engine_null.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\input_engines\input_engine_null.c</FilePath>
+              <FilePath>..\awtk\src\input_engines\input_engine_null.c</FilePath>
             </File>
             <File>
               <FileName>input_method_creator.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\input_methods\input_method_creator.c</FilePath>
+              <FilePath>..\awtk\src\input_methods\input_method_creator.c</FilePath>
             </File>
             <File>
               <FileName>children_layouter_builtins.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\layouters\children_layouter_builtins.c</FilePath>
+              <FilePath>..\awtk\src\layouters\children_layouter_builtins.c</FilePath>
             </File>
             <File>
               <FileName>children_layouter_parser.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\layouters\children_layouter_parser.c</FilePath>
+              <FilePath>..\awtk\src\layouters\children_layouter_parser.c</FilePath>
             </File>
             <File>
               <FileName>self_layouter_builtins.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\layouters\self_layouter_builtins.c</FilePath>
+              <FilePath>..\awtk\src\layouters\self_layouter_builtins.c</FilePath>
             </File>
             <File>
               <FileName>self_layouter_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\layouters\self_layouter_default.c</FilePath>
+              <FilePath>..\awtk\src\layouters\self_layouter_default.c</FilePath>
             </File>
             <File>
               <FileName>self_layouter_menu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\layouters\self_layouter_menu.c</FilePath>
+              <FilePath>..\awtk\src\layouters\self_layouter_menu.c</FilePath>
             </File>
             <File>
               <FileName>self_layouter_parser.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\layouters\self_layouter_parser.c</FilePath>
+              <FilePath>..\awtk\src\layouters\self_layouter_parser.c</FilePath>
             </File>
             <File>
               <FileName>children_layouter_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\layouters\children_layouter_default.c</FilePath>
+              <FilePath>..\awtk\src\layouters\children_layouter_default.c</FilePath>
             </File>
             <File>
               <FileName>main_loop_simple.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\main_loop\main_loop_simple.c</FilePath>
+              <FilePath>..\awtk\src\main_loop\main_loop_simple.c</FilePath>
             </File>
             <File>
               <FileName>native_window_raw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\native_window\native_window_raw.c</FilePath>
+              <FilePath>..\awtk\src\native_window\native_window_raw.c</FilePath>
             </File>
             <File>
               <FileName>ui_binary_writer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\ui_loader\ui_binary_writer.c</FilePath>
+              <FilePath>..\awtk\src\ui_loader\ui_binary_writer.c</FilePath>
             </File>
             <File>
               <FileName>ui_builder_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\ui_loader\ui_builder_default.c</FilePath>
+              <FilePath>..\awtk\src\ui_loader\ui_builder_default.c</FilePath>
             </File>
             <File>
               <FileName>ui_loader_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\ui_loader\ui_loader_default.c</FilePath>
+              <FilePath>..\awtk\src\ui_loader\ui_loader_default.c</FilePath>
             </File>
             <File>
               <FileName>ui_loader_xml.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\ui_loader\ui_loader_xml.c</FilePath>
+              <FilePath>..\awtk\src\ui_loader\ui_loader_xml.c</FilePath>
             </File>
             <File>
               <FileName>ui_serializer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\ui_loader\ui_serializer.c</FilePath>
+              <FilePath>..\awtk\src\ui_loader\ui_serializer.c</FilePath>
             </File>
             <File>
               <FileName>ui_xml_writer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\ui_loader\ui_xml_writer.c</FilePath>
+              <FilePath>..\awtk\src\ui_loader\ui_xml_writer.c</FilePath>
             </File>
             <File>
               <FileName>window_open.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\ui_loader\window_open.c</FilePath>
+              <FilePath>..\awtk\src\ui_loader\window_open.c</FilePath>
             </File>
             <File>
               <FileName>vgcanvas_null.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\vgcanvas\vgcanvas_null.c</FilePath>
+              <FilePath>..\awtk\src\vgcanvas\vgcanvas_null.c</FilePath>
             </File>
             <File>
               <FileName>app_bar.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\app_bar.c</FilePath>
+              <FilePath>..\awtk\src\widgets\app_bar.c</FilePath>
             </File>
             <File>
               <FileName>button.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\button.c</FilePath>
+              <FilePath>..\awtk\src\widgets\button.c</FilePath>
             </File>
             <File>
               <FileName>button_group.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\button_group.c</FilePath>
+              <FilePath>..\awtk\src\widgets\button_group.c</FilePath>
             </File>
             <File>
               <FileName>calibration_win.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\calibration_win.c</FilePath>
+              <FilePath>..\awtk\src\widgets\calibration_win.c</FilePath>
             </File>
             <File>
               <FileName>check_button.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\check_button.c</FilePath>
+              <FilePath>..\awtk\src\widgets\check_button.c</FilePath>
             </File>
             <File>
               <FileName>color_tile.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\color_tile.c</FilePath>
+              <FilePath>..\awtk\src\widgets\color_tile.c</FilePath>
             </File>
             <File>
               <FileName>column.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\column.c</FilePath>
+              <FilePath>..\awtk\src\widgets\column.c</FilePath>
             </File>
             <File>
               <FileName>combo_box.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\combo_box.c</FilePath>
+              <FilePath>..\awtk\src\widgets\combo_box.c</FilePath>
             </File>
             <File>
               <FileName>combo_box_item.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\combo_box_item.c</FilePath>
+              <FilePath>..\awtk\src\widgets\combo_box_item.c</FilePath>
             </File>
             <File>
               <FileName>dialog_client.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\dialog_client.c</FilePath>
+              <FilePath>..\awtk\src\widgets\dialog_client.c</FilePath>
             </File>
             <File>
               <FileName>dialog_helper.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\dialog_helper.c</FilePath>
+              <FilePath>..\awtk\src\widgets\dialog_helper.c</FilePath>
             </File>
             <File>
               <FileName>dialog_title.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\dialog_title.c</FilePath>
+              <FilePath>..\awtk\src\widgets\dialog_title.c</FilePath>
             </File>
             <File>
               <FileName>dragger.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\dragger.c</FilePath>
+              <FilePath>..\awtk\src\widgets\dragger.c</FilePath>
             </File>
             <File>
               <FileName>edit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\edit.c</FilePath>
+              <FilePath>..\awtk\src\widgets\edit.c</FilePath>
             </File>
             <File>
               <FileName>grid.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\grid.c</FilePath>
+              <FilePath>..\awtk\src\widgets\grid.c</FilePath>
             </File>
             <File>
               <FileName>grid_item.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\grid_item.c</FilePath>
+              <FilePath>..\awtk\src\widgets\grid_item.c</FilePath>
             </File>
             <File>
               <FileName>group_box.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\group_box.c</FilePath>
+              <FilePath>..\awtk\src\widgets\group_box.c</FilePath>
             </File>
             <File>
               <FileName>image.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\image.c</FilePath>
+              <FilePath>..\awtk\src\widgets\image.c</FilePath>
             </File>
             <File>
               <FileName>label.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\label.c</FilePath>
+              <FilePath>..\awtk\src\widgets\label.c</FilePath>
             </File>
             <File>
               <FileName>overlay.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\overlay.c</FilePath>
+              <FilePath>..\awtk\src\widgets\overlay.c</FilePath>
             </File>
             <File>
               <FileName>pages.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\pages.c</FilePath>
+              <FilePath>..\awtk\src\widgets\pages.c</FilePath>
             </File>
             <File>
               <FileName>popup.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\popup.c</FilePath>
+              <FilePath>..\awtk\src\widgets\popup.c</FilePath>
             </File>
             <File>
               <FileName>progress_bar.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\progress_bar.c</FilePath>
+              <FilePath>..\awtk\src\widgets\progress_bar.c</FilePath>
             </File>
             <File>
               <FileName>row.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\row.c</FilePath>
+              <FilePath>..\awtk\src\widgets\row.c</FilePath>
             </File>
             <File>
               <FileName>slider.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\slider.c</FilePath>
+              <FilePath>..\awtk\src\widgets\slider.c</FilePath>
             </File>
             <File>
               <FileName>spin_box.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\spin_box.c</FilePath>
+              <FilePath>..\awtk\src\widgets\spin_box.c</FilePath>
             </File>
             <File>
               <FileName>system_bar.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\system_bar.c</FilePath>
+              <FilePath>..\awtk\src\widgets\system_bar.c</FilePath>
             </File>
             <File>
               <FileName>tab_button.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\tab_button.c</FilePath>
+              <FilePath>..\awtk\src\widgets\tab_button.c</FilePath>
             </File>
             <File>
               <FileName>tab_button_group.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\tab_button_group.c</FilePath>
+              <FilePath>..\awtk\src\widgets\tab_button_group.c</FilePath>
             </File>
             <File>
               <FileName>tab_control.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\tab_control.c</FilePath>
+              <FilePath>..\awtk\src\widgets\tab_control.c</FilePath>
             </File>
             <File>
               <FileName>view.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\view.c</FilePath>
+              <FilePath>..\awtk\src\widgets\view.c</FilePath>
             </File>
             <File>
               <FileName>widgets.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\widgets.c</FilePath>
+              <FilePath>..\awtk\src\widgets\widgets.c</FilePath>
             </File>
             <File>
               <FileName>window_manager_default.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\window_manager\window_manager_default.c</FilePath>
+              <FilePath>..\awtk\src\window_manager\window_manager_default.c</FilePath>
             </File>
             <File>
               <FileName>xml_builder.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\xml\xml_builder.c</FilePath>
+              <FilePath>..\awtk\src\xml\xml_builder.c</FilePath>
             </File>
             <File>
               <FileName>xml_parser.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\xml\xml_parser.c</FilePath>
+              <FilePath>..\awtk\src\xml\xml_parser.c</FilePath>
             </File>
             <File>
               <FileName>awtk_global.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\awtk_global.c</FilePath>
+              <FilePath>..\awtk\src\awtk_global.c</FilePath>
             </File>
             <File>
               <FileName>emojidef.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\3rd\libunibreak\emojidef.c</FilePath>
+              <FilePath>..\awtk\3rd\libunibreak\emojidef.c</FilePath>
             </File>
             <File>
               <FileName>graphemebreak.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\3rd\libunibreak\graphemebreak.c</FilePath>
+              <FilePath>..\awtk\3rd\libunibreak\graphemebreak.c</FilePath>
             </File>
             <File>
               <FileName>linebreak.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\3rd\libunibreak\linebreak.c</FilePath>
+              <FilePath>..\awtk\3rd\libunibreak\linebreak.c</FilePath>
             </File>
             <File>
               <FileName>linebreakdata.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\3rd\libunibreak\linebreakdata.c</FilePath>
+              <FilePath>..\awtk\3rd\libunibreak\linebreakdata.c</FilePath>
             </File>
             <File>
               <FileName>linebreakdef.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\3rd\libunibreak\linebreakdef.c</FilePath>
+              <FilePath>..\awtk\3rd\libunibreak\linebreakdef.c</FilePath>
             </File>
             <File>
               <FileName>unibreakbase.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\3rd\libunibreak\unibreakbase.c</FilePath>
+              <FilePath>..\awtk\3rd\libunibreak\unibreakbase.c</FilePath>
             </File>
             <File>
               <FileName>unibreakdef.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\3rd\libunibreak\unibreakdef.c</FilePath>
+              <FilePath>..\awtk\3rd\libunibreak\unibreakdef.c</FilePath>
             </File>
             <File>
               <FileName>wordbreak.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\3rd\libunibreak\wordbreak.c</FilePath>
+              <FilePath>..\awtk\3rd\libunibreak\wordbreak.c</FilePath>
             </File>
             <File>
               <FileName>digit_clock.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\digit_clock.c</FilePath>
+              <FilePath>..\awtk\src\widgets\digit_clock.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr565_bgr565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr565_bgr565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr565_bgr565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr565_bgra8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr565_bgra8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr565_bgra8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr565_rgba8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr565_rgba8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr565_rgba8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr888_bgr565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr888_bgr565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr888_bgr565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr888_bgra8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr888_bgra8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr888_bgra8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr888_rgba8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr888_rgba8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr888_rgba8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgra8888_bgr565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgra8888_bgr565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgra8888_bgr565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgra8888_bgra8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgra8888_bgra8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgra8888_bgra8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgra8888_rgba8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgra8888_rgba8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgra8888_rgba8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb565_bgr565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb565_bgr565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb565_bgr565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb565_bgra8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb565_bgra8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb565_bgra8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb565_rgba8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb565_rgba8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb565_rgba8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgba8888_bgr565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgba8888_bgr565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgba8888_bgr565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgba8888_bgra8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgba8888_bgra8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgba8888_bgra8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgba8888_rgba8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgba8888_rgba8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgba8888_rgba8888.c</FilePath>
             </File>
             <File>
               <FileName>fill_image_abgr8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\fill_image_abgr8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\fill_image_abgr8888.c</FilePath>
             </File>
             <File>
               <FileName>fill_image_argb8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\fill_image_argb8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\fill_image_argb8888.c</FilePath>
             </File>
             <File>
               <FileName>fill_image_bgr565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\fill_image_bgr565.c</FilePath>
+              <FilePath>..\awtk\src\blend\fill_image_bgr565.c</FilePath>
             </File>
             <File>
               <FileName>fill_image_bgr888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\fill_image_bgr888.c</FilePath>
+              <FilePath>..\awtk\src\blend\fill_image_bgr888.c</FilePath>
             </File>
             <File>
               <FileName>fill_image_bgra8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\fill_image_bgra8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\fill_image_bgra8888.c</FilePath>
             </File>
             <File>
               <FileName>fill_image_rgb565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\fill_image_rgb565.c</FilePath>
+              <FilePath>..\awtk\src\blend\fill_image_rgb565.c</FilePath>
             </File>
             <File>
               <FileName>fill_image_rgba8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\fill_image_rgba8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\fill_image_rgba8888.c</FilePath>
             </File>
             <File>
               <FileName>image_g2d.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\image_g2d.c</FilePath>
+              <FilePath>..\awtk\src\blend\image_g2d.c</FilePath>
             </File>
             <File>
               <FileName>rotate_image_bgr565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\rotate_image_bgr565.c</FilePath>
+              <FilePath>..\awtk\src\blend\rotate_image_bgr565.c</FilePath>
             </File>
             <File>
               <FileName>rotate_image_bgr888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\rotate_image_bgr888.c</FilePath>
+              <FilePath>..\awtk\src\blend\rotate_image_bgr888.c</FilePath>
             </File>
             <File>
               <FileName>rotate_image_bgra8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\rotate_image_bgra8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\rotate_image_bgra8888.c</FilePath>
             </File>
             <File>
               <FileName>rotate_image_rgb565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\rotate_image_rgb565.c</FilePath>
+              <FilePath>..\awtk\src\blend\rotate_image_rgb565.c</FilePath>
             </File>
             <File>
               <FileName>rotate_image_rgba8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\rotate_image_rgba8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\rotate_image_rgba8888.c</FilePath>
             </File>
             <File>
               <FileName>soft_g2d.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\soft_g2d.c</FilePath>
+              <FilePath>..\awtk\src\blend\soft_g2d.c</FilePath>
             </File>
             <File>
               <FileName>log.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\log.c</FilePath>
+              <FilePath>..\awtk\src\tkc\log.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb888_bgr565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb888_bgr565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb888_bgr565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb888_bgra8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb888_bgra8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb888_bgra8888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb888_rgba8888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb888_rgba8888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb888_rgba8888.c</FilePath>
             </File>
             <File>
               <FileName>fill_image_rgb888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\fill_image_rgb888.c</FilePath>
+              <FilePath>..\awtk\src\blend\fill_image_rgb888.c</FilePath>
             </File>
             <File>
               <FileName>rotate_image_rgb888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\rotate_image_rgb888.c</FilePath>
+              <FilePath>..\awtk\src\blend\rotate_image_rgb888.c</FilePath>
             </File>
             <File>
               <FileName>clip_view.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\widgets\clip_view.c</FilePath>
+              <FilePath>..\awtk\src\widgets\clip_view.c</FilePath>
             </File>
             <File>
               <FileName>asset_info.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\asset_info.c</FilePath>
+              <FilePath>..\awtk\src\tkc\asset_info.c</FilePath>
             </File>
             <File>
               <FileName>date_time_format.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\date_time_format.c</FilePath>
+              <FilePath>..\awtk\src\base\date_time_format.c</FilePath>
             </File>
             <File>
               <FileName>asset_loader.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\base\asset_loader.c</FilePath>
+              <FilePath>..\awtk\src\base\asset_loader.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr565_rgb565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr565_rgb565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr565_rgb565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr888_rgb565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr888_rgb565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr888_rgb565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgra8888_rgb565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgra8888_rgb565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgra8888_rgb565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb565_rgb565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb565_rgb565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb565_rgb565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb888_rgb565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb888_rgb565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb888_rgb565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgba8888_rgb565.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgba8888_rgb565.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgba8888_rgb565.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_bgr888_bgr888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_bgr888_bgr888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_bgr888_bgr888.c</FilePath>
             </File>
             <File>
               <FileName>blend_image_rgb888_rgb888.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\blend\blend_image_rgb888_rgb888.c</FilePath>
+              <FilePath>..\awtk\src\blend\blend_image_rgb888_rgb888.c</FilePath>
             </File>
             <File>
               <FileName>wchar32.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\tkc\wchar32.c</FilePath>
+              <FilePath>..\awtk\src\tkc\wchar32.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1731,27 +1731,27 @@
             <File>
               <FileName>cond_var_null.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\cond_var_null.c</FilePath>
+              <FilePath>..\awtk\src\platforms\raw\cond_var_null.c</FilePath>
             </File>
             <File>
               <FileName>fs_os.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\fs_os.c</FilePath>
+              <FilePath>..\awtk\src\platforms\raw\fs_os.c</FilePath>
             </File>
             <File>
               <FileName>mutex_null.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\mutex_null.c</FilePath>
+              <FilePath>..\awtk\src\platforms\raw\mutex_null.c</FilePath>
             </File>
             <File>
               <FileName>sys_tick_handler.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\sys_tick_handler.c</FilePath>
+              <FilePath>..\awtk\src\platforms\raw\sys_tick_handler.c</FilePath>
             </File>
             <File>
               <FileName>semaphore_null.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\src\platforms\raw\semaphore_null.c</FilePath>
+              <FilePath>..\awtk\src\platforms\raw\semaphore_null.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1759,14 +1759,39 @@
           <GroupName>awtk-demo</GroupName>
           <Files>
             <File>
-              <FileName>assets-mini.c</FileName>
+              <FileName>application.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\demos\assets-mini.c</FilePath>
+              <FilePath>..\awtk-demo-app\src\application.c</FilePath>
             </File>
             <File>
-              <FileName>demo_basic.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\awtk\demos\demo_basic.c</FilePath>
+              <FilePath>..\awtk-demo-app\src\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>navigator.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk-demo-app\src\common\navigator.c</FilePath>
+            </File>
+            <File>
+              <FileName>navigator.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\awtk-demo-app\src\common\navigator.h</FilePath>
+            </File>
+            <File>
+              <FileName>home_page.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk-demo-app\src\pages\home_page.c</FilePath>
+            </File>
+            <File>
+              <FileName>window1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk-demo-app\src\pages\window1.c</FilePath>
+            </File>
+            <File>
+              <FileName>window2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\awtk-demo-app\src\pages\window2.c</FilePath>
             </File>
           </Files>
         </Group>
