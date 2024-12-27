@@ -10,10 +10,11 @@
 
 1. 获取源码
 
+> 将三个仓库取到同一个目录下：
 ```
-git clone https://github.com/zlgopen/awtk-stm32f103ze-raw.git
-cd awtk-stm32f103ze-raw
 git clone https://github.com/zlgopen/awtk.git
+git clone https://github.com/zlgopen/awtk-demo-app.git
+git clone https://github.com/zlgopen/awtk-stm32f103ze-raw.git
 ```
 
 2. 用 keil 打开 awtk.uvproj
